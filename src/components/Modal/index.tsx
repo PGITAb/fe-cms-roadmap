@@ -52,6 +52,7 @@ const gametypemap: { [key: string]: number } = {
 };
 
 const ModalComponent: React.FC<ModalComponentProps> = (props) => {
+  console.log('just commit purpose');
   const { visible, onCancel, gameRoundID, gameType, url } = props;
   const [items, setItems] = useState(undefined);
   const [statistic, setStatistic] = useState(undefined);
