@@ -166,6 +166,7 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
             )
           );
           setIsLoaded(true);
+          console.log(data);
         } catch (error) {
           console.log(error.response);
           setIsError(true);

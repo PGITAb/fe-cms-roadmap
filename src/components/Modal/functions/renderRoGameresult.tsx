@@ -30,7 +30,7 @@ const renderRoGameresult = (items): React.ReactNode => {
       break;
   }
 
-  if (items.resultInt.Value % 2 == 0) {
+  if (items.resultInt.Value % 2 === 0) {
     num = '雙';
   } else {
     num = '單';
@@ -42,7 +42,7 @@ const renderRoGameresult = (items): React.ReactNode => {
     size = '小';
   }
 
-  if (items.resultInt.Value == 0) {
+  if (items.resultInt.Value === 0) {
     num = '';
     size = '';
   }
