@@ -63,10 +63,6 @@ LW.args = {
   // primary: true,
   // label: "Button",
 };
-// export const Secondary = Template.bind({});
-// Secondary.args = {
-//   label: "Button",
-// };
 
 // export const Large = Template.bind({});
 // Large.args = {
