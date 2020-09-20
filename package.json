@@ -1,6 +1,6 @@
 {
   "name": "fe-react-cms-roadmap",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "build/index.js",
   "private": false,
   "files": [
@@ -54,6 +54,7 @@
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-flow": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
