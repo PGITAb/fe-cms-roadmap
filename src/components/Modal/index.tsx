@@ -59,13 +59,13 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
   const [isError, setIsError] = useState<boolean>(false);
 
   const renderHeaderContent = useCallback((): any => {
-    if (!isError && isLoaded && gameType) {
+    if (!isError && isLoaded && gameType && items) {
       return renderHeader(items, gameType);
     }
   }, [gameType, isError, isLoaded, items]);
 
   const renderContent = useCallback((): any => {
-    if (!isError && isLoaded && gameType) {
+    if (!isError && isLoaded && gameType && statistic && items) {
       switch (gameType) {
         case 'BAC':
         case 'BAS':
@@ -119,7 +119,7 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
   }, [gameType, isError, isLoaded, items, statistic]);
 
   const renderStat = useCallback((): any => {
-    if (!isError && isLoaded && gameType) {
+    if (!isError && isLoaded && gameType && statistic) {
       switch (gameType) {
         case 'BAC':
         case 'BAS':
@@ -145,11 +145,10 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
           break;
       }
     }
-  }, [gameType, isError, isLoaded, items, statistic]);
+  }, [isError, isLoaded, gameType, statistic, items]);
 
   useEffect(() => {
     if (visible && gameRoundID && gameType) {
-      setIsLoaded(false);
       (async (): Promise<void> => {
         try {
           const { data } = await axios.get(url, {
@@ -173,7 +172,12 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
         }
       })();
     }
-    return (): void => setIsError(false);
+    return (): void => {
+      setIsLoaded(false);
+      setIsError(false);
+      setStatistic(undefined);
+      setItems(undefined);
+    };
   }, [visible, gameRoundID, gameType, url]);
 
   return (
@@ -189,7 +193,6 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
         <div className="content">
           <div id="div1-abcd">{renderContent()}</div>
           <div id="div2-abcd">
-            {' '}
             <span className="label-abcd success-abcd">視頻</span>
             <br />
             <br />

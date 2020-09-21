@@ -21,13 +21,39 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader'],
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 100000,
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 100000,
+            },
+          },
+        ],
       },
     ],
   },
   externals: {
-    react: 'commonjs react',
+    // Don't bundle react or react-dom
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      amd: 'React',
+      root: 'React',
+    },
+    'react-dom': {
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'ReactDOM',
+      root: 'ReactDOM',
+    },
   },
   resolve: {
     extensions: ['.js', '.jsx', '.tsx', '.ts'],
