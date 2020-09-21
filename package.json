@@ -1,6 +1,6 @@
 {
   "name": "fe-react-cms-roadmap",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "build/index.js",
   "private": false,
   "files": [
@@ -27,6 +27,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "build:webpack": "rm -rf build && webpack",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
