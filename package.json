@@ -1,6 +1,6 @@
 {
   "name": "fe-react-cms-roadmap",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "main": "build/index.js",
   "private": false,
   "files": [
@@ -69,6 +69,7 @@
     "prettier": "^2.1.2",
     "react-is": "^16.13.1",
     "style-loader": "^1.2.1",
+    "svg-url-loader": "^6.0.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   }
