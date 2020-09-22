@@ -20,6 +20,15 @@ const dices = {
   6: dice6,
 };
 
+const isStatisticData = (
+  type: string,
+  data: any,
+  arrayIndex: number
+): boolean | string => {
+  if (!data.roadmapdata.inGame[type][arrayIndex]?.v) return false;
+  return true;
+};
+
 const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
   const indents1 = [];
   const indents2 = [];
@@ -60,7 +69,8 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
           <div className={className} key={i.toString()}>
             <img
               className={
-                statistic.roadmapdata.inGame.bead[i] === null
+                statistic.roadmapdata.inGame.bead[i] === null ||
+                !isStatisticData('bead', statistic, i)
                   ? 'srcInvisibleDi'
                   : 'srcVisibleDi'
               }
@@ -70,7 +80,8 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
             <br />
             <img
               className={
-                statistic.roadmapdata.inGame.bead[i] === null
+                statistic.roadmapdata.inGame.bead[i] === null ||
+                !isStatisticData('bead', statistic, i)
                   ? 'srcInvisibleDi'
                   : 'srcVisibleDi'
               }
@@ -80,7 +91,8 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
             <br />
             <img
               className={
-                statistic.roadmapdata.inGame.bead[i] === null
+                statistic.roadmapdata.inGame.bead[i] === null ||
+                !isStatisticData('bead', statistic, i)
                   ? 'srcInvisibleDi'
                   : 'srcVisibleDi'
               }
@@ -103,12 +115,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 1).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.size[indents2key] === null
+              statistic.roadmapdata.inGame.size[indents2key] === null ||
+              !isStatisticData('size', statistic, indents2key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.size[indents2key] === null
+              statistic.roadmapdata.inGame.size[indents2key] === null ||
+              !isStatisticData('size', statistic, indents2key)
                 ? roundBig
                 : statistic.roadmapdata.inGame.size[indents2key].v === 2
                 ? roundBig
@@ -124,12 +138,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 7).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.odd[indents2key] === null
+              statistic.roadmapdata.inGame.odd[indents2key] === null ||
+              !isStatisticData('odd', statistic, indents2key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.odd[indents2key] === null
+              statistic.roadmapdata.inGame.odd[indents2key] === null ||
+              !isStatisticData('odd', statistic, indents2key)
                 ? roundDouble
                 : statistic.roadmapdata.inGame.odd[indents2key].v === 2
                 ? roundDouble
@@ -147,12 +163,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 2).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.size[indents3key] === null
+              statistic.roadmapdata.inGame.size[indents3key] === null ||
+              !isStatisticData('size', statistic, indents3key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.size[indents3key] === null
+              statistic.roadmapdata.inGame.size[indents3key] === null ||
+              !isStatisticData('size', statistic, indents3key)
                 ? roundBig
                 : statistic.roadmapdata.inGame.size[indents3key].v === 2
                 ? roundBig
@@ -168,12 +186,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 8).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.odd[indents3key] === null
+              statistic.roadmapdata.inGame.odd[indents3key] === null ||
+              !isStatisticData('odd', statistic, indents3key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.odd[indents3key] === null
+              statistic.roadmapdata.inGame.odd[indents3key] === null ||
+              !isStatisticData('odd', statistic, indents3key)
                 ? roundDouble
                 : statistic.roadmapdata.inGame.odd[indents3key].v === 2
                 ? roundDouble
@@ -191,12 +211,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 3).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.size[indents4key] === null
+              statistic.roadmapdata.inGame.size[indents4key] === null ||
+              !isStatisticData('size', statistic, indents4key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.size[indents4key] === null
+              statistic.roadmapdata.inGame.size[indents4key] === null ||
+              !isStatisticData('size', statistic, indents4key)
                 ? roundBig
                 : statistic.roadmapdata.inGame.size[indents4key].v === 2
                 ? roundBig
@@ -212,12 +234,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 9).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.odd[indents4key] === null
+              statistic.roadmapdata.inGame.odd[indents4key] === null ||
+              !isStatisticData('odd', statistic, indents4key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.odd[indents4key] === null
+              statistic.roadmapdata.inGame.odd[indents4key] === null ||
+              !isStatisticData('odd', statistic, indents4key)
                 ? roundDouble
                 : statistic.roadmapdata.inGame.odd[indents4key].v === 2
                 ? roundDouble
@@ -235,12 +259,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 4).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.size[indents5key] === null
+              statistic.roadmapdata.inGame.size[indents5key] === null ||
+              !isStatisticData('size', statistic, indents5key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.size[indents5key] === null
+              statistic.roadmapdata.inGame.size[indents5key] === null ||
+              !isStatisticData('size', statistic, indents5key)
                 ? roundBig
                 : statistic.roadmapdata.inGame.size[indents5key].v === 2
                 ? roundBig
@@ -256,12 +282,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 10).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.odd[indents5key] === null
+              statistic.roadmapdata.inGame.odd[indents5key] === null ||
+              !isStatisticData('odd', statistic, indents5key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.odd[indents5key] === null
+              statistic.roadmapdata.inGame.odd[indents5key] === null ||
+              !isStatisticData('odd', statistic, indents5key)
                 ? roundDouble
                 : statistic.roadmapdata.inGame.odd[indents5key].v === 2
                 ? roundDouble
@@ -281,12 +309,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 5).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.size[indents6key] === null
+              statistic.roadmapdata.inGame.size[indents6key] === null ||
+              !isStatisticData('size', statistic, indents6key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.size[indents6key] === null
+              statistic.roadmapdata.inGame.size[indents6key] === null ||
+              !isStatisticData('size', statistic, indents6key)
                 ? roundBig
                 : statistic.roadmapdata.inGame.size[indents6key].v === 2
                 ? roundBig
@@ -302,12 +332,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize} key={(i + 24 * 11).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.odd[indents6key] === null
+              statistic.roadmapdata.inGame.odd[indents6key] === null ||
+              !isStatisticData('odd', statistic, indents6key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.odd[indents6key] === null
+              statistic.roadmapdata.inGame.odd[indents6key] === null ||
+              !isStatisticData('odd', statistic, indents6key)
                 ? roundDouble
                 : statistic.roadmapdata.inGame.odd[indents6key].v === 2
                 ? roundDouble
@@ -325,12 +357,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize2} key={(i + 24 * 6).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.size[indents7key] === null
+              statistic.roadmapdata.inGame.size[indents7key] === null ||
+              !isStatisticData('size', statistic, indents7key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.size[indents7key] === null
+              statistic.roadmapdata.inGame.size[indents7key] === null ||
+              !isStatisticData('size', statistic, indents7key)
                 ? roundBig
                 : statistic.roadmapdata.inGame.size[indents7key].v === 2
                 ? roundBig
@@ -346,12 +380,14 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
         <div className={classNameSize2} key={(i + 24 * 12).toString()}>
           <img
             className={
-              statistic.roadmapdata.inGame.odd[indents7key] === null
+              statistic.roadmapdata.inGame.odd[indents7key] === null ||
+              !isStatisticData('odd', statistic, indents7key)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
-              statistic.roadmapdata.inGame.odd[indents7key] === null
+              statistic.roadmapdata.inGame.odd[indents7key] === null ||
+              !isStatisticData('odd', statistic, indents7key)
                 ? roundDouble
                 : statistic.roadmapdata.inGame.odd[indents7key].v === 2
                 ? roundDouble

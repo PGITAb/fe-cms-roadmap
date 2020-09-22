@@ -64,6 +64,24 @@ LW.args = {
   // label: "Button",
 };
 
+export const DI = Template.bind({});
+DI.args = {
+  gameRoundID: 'BTKPIU2HE4OJNQI0CE6G',
+  gameType: 'DI',
+  url: 'https://dev-backoffice-api.weapi247.com/gameresult',
+  // primary: true,
+  // label: "Button",
+};
+
+export const ROL = Template.bind({});
+ROL.args = {
+  gameRoundID: 'BTKPITQHE4OJNQI0CE5G',
+  gameType: 'ROL',
+  url: 'https://dev-backoffice-api.weapi247.com/gameresult',
+  // primary: true,
+  // label: "Button",
+};
+
 // export const Large = Template.bind({});
 // Large.args = {
 //   size: "large",
