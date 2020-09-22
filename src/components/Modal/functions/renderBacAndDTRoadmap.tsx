@@ -6,6 +6,15 @@ import red from '../../../assets/red.png';
 import redSolid from '../../../assets/redSolid.png';
 import roachRed from '../../../assets/roachRed.png';
 
+const isStatisticData = (
+  type: string,
+  data: any,
+  arrayIndex: number
+): boolean | string => {
+  if (!data.roadmapdata.inGame[type][arrayIndex]?.v) return false;
+  return true;
+};
+
 const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
   const indents1 = [];
   const indents2 = [];
@@ -26,13 +35,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigRoad[i * 6] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6)
               ? 'srcInvisible'
               : 'srcVisible'
           }
           src={
             statistic.roadmapdata.inGame.bigRoad[i * 6] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6)
               ? blue
               : statistic.roadmapdata.inGame.bigRoad[i * 6].v === 'p'
               ? blue
@@ -47,13 +56,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 1] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 1].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 1)
               ? 'srcInvisible'
               : 'srcVisible'
           }
           src={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 1] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 1].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 1)
               ? blue
               : statistic.roadmapdata.inGame.bigRoad[i * 6 + 1].v === 'p'
               ? blue
@@ -68,13 +77,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 2] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 2].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 2)
               ? 'srcInvisible'
               : 'srcVisible'
           }
           src={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 2] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 2].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 2)
               ? blue
               : statistic.roadmapdata.inGame.bigRoad[i * 6 + 2].v === 'p'
               ? blue
@@ -89,13 +98,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 3] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 3].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 3)
               ? 'srcInvisible'
               : 'srcVisible'
           }
           src={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 3] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 3].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 3)
               ? blue
               : statistic.roadmapdata.inGame.bigRoad[i * 6 + 3].v === 'p'
               ? blue
@@ -110,13 +119,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 4] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 4].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 4)
               ? 'srcInvisible'
               : 'srcVisible'
           }
           src={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 4] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 4].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 4)
               ? blue
               : statistic.roadmapdata.inGame.bigRoad[i * 6 + 4].v === 'p'
               ? blue
@@ -131,13 +140,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 5] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 5].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 5)
               ? 'srcInvisible'
               : 'srcVisible'
           }
           src={
             statistic.roadmapdata.inGame.bigRoad[i * 6 + 5] === null ||
-            statistic.roadmapdata.inGame.bigRoad[i * 6 + 5].v === undefined
+            !isStatisticData('bigRoad', statistic, i * 6 + 5)
               ? blue
               : statistic.roadmapdata.inGame.bigRoad[i * 6 + 5].v === 'p'
               ? blue
@@ -152,13 +161,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[i * 2 * 6].v === 'p'
               ? blue
@@ -169,13 +178,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6].v === undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6].v === undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6].v === 'p'
               ? blue
@@ -186,13 +195,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 1)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 1)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1].v === 'p'
               ? blue
@@ -203,15 +212,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 1)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 1)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1].v ===
                 'p'
@@ -227,13 +234,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 2] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 2].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 2)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 2] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 2].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 2)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 2].v === 'p'
               ? blue
@@ -244,15 +251,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 2] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 2].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 2)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 2] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 2].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 2)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 2].v ===
                 'p'
@@ -264,15 +269,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 2] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 2].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 1 + 2)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 2] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 2].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 1 + 2)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 2].v === 'p'
               ? blue
@@ -284,16 +287,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           className={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 2] ===
               null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 2].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 1 + 2)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 2] ===
               null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 2].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 1 + 2)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 2]
                   .v === 'p'
@@ -309,13 +310,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 4] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 4].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 4)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 4] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 4].v === undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 4)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 4].v === 'p'
               ? blue
@@ -326,15 +327,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 4] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 4].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 4)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 4] === null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 4].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 4)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 4].v ===
                 'p'
@@ -346,15 +345,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
         <img
           className={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 4] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 4].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 1 + 4)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 4] === null ||
-            statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 4].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, i * 2 * 6 + 1 + 4)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[i * 2 * 6 + 1 + 4].v === 'p'
               ? blue
@@ -366,16 +363,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           className={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 4] ===
               null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 4].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 1 + 4)
               ? 'srcInvisibleSmall'
               : 'srcVisibleSmall'
           }
           src={
             statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 4] ===
               null ||
-            statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 4].v ===
-              undefined
+            !isStatisticData('bigEye', statistic, (i * 2 + 1) * 6 + 1 + 4)
               ? blue
               : statistic.roadmapdata.inGame.bigEye[(i * 2 + 1) * 6 + 1 + 4]
                   .v === 'p'
@@ -392,13 +387,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[i * 2 * 6] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6]?.v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[i * 2 * 6] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6]?.v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[i * 2 * 6].v === 'p'
                 ? blueSolid
@@ -409,15 +404,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6] === null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6] === null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6].v === 'p'
                 ? blueSolid
@@ -428,13 +421,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 1] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 1].v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 1)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 1] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 1].v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 1)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[i * 2 * 6 + 1].v === 'p'
                 ? blueSolid
@@ -446,16 +439,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             className={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 1)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 1)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1].v ===
                   'p'
@@ -471,13 +462,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 2] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 2].v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 2)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 2] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 2].v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 2)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[i * 2 * 6 + 2].v === 'p'
                 ? blueSolid
@@ -489,16 +480,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             className={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 2] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 2].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 2)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 2] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 2].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 2)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 2].v ===
                   'p'
@@ -510,15 +499,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 2] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 2].v ===
-                undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 1 + 2)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 2] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 2].v ===
-                undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 1 + 2)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 2].v ===
                   'p'
@@ -531,16 +518,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             className={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 2] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 2].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 1 + 2)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 2] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 2].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 1 + 2)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 2]
                     .v === 'p'
@@ -556,13 +541,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 4] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 4].v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 4)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 4] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 4].v === undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 4)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[i * 2 * 6 + 4].v === 'p'
                 ? blueSolid
@@ -574,16 +559,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             className={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 4] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 4].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 4)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 4] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 4].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 4)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 4].v ===
                   'p'
@@ -595,15 +578,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 4] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 4].v ===
-                undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 1 + 4)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 4] === null ||
-              statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 4].v ===
-                undefined
+              !isStatisticData('small', statistic, i * 2 * 6 + 1 + 4)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[i * 2 * 6 + 1 + 4].v ===
                   'p'
@@ -616,16 +597,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             className={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 4] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 4].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 1 + 4)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 4] ===
                 null ||
-              statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 4].v ===
-                undefined
+              !isStatisticData('small', statistic, (i * 2 + 1) * 6 + 1 + 4)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[(i * 2 + 1) * 6 + 1 + 4]
                     .v === 'p'
@@ -647,13 +626,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6].v === undefined
+                !isStatisticData('small', statistic, j * 2 * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6].v === undefined
+                !isStatisticData('small', statistic, j * 2 * 6)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6].v === 'p'
                   ? roachBlue
@@ -664,15 +643,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
                     'p'
@@ -684,15 +661,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v === 'p'
                   ? roachBlue
@@ -704,16 +679,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1]
                       .v === 'p'
@@ -729,15 +702,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v === 'p'
                   ? roachBlue
@@ -749,16 +720,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2]
                       .v === 'p'
@@ -771,16 +740,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
                     'p'
@@ -793,16 +760,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
                       .v === 'p'
@@ -818,15 +783,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v === 'p'
                   ? roachBlue
@@ -838,16 +801,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4]
                       .v === 'p'
@@ -860,16 +821,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
                     'p'
@@ -882,16 +841,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
                       .v === 'p'
@@ -908,13 +865,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6].v === undefined
+                !isStatisticData('small', statistic, j * 2 * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6].v === undefined
+                !isStatisticData('small', statistic, j * 2 * 6)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6].v === 'p'
                   ? roachBlue
@@ -925,15 +882,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
                     'p'
@@ -945,15 +900,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v === 'p'
                   ? roachBlue
@@ -965,16 +918,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1]
                       .v === 'p'
@@ -990,15 +941,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v === 'p'
                   ? roachBlue
@@ -1010,16 +959,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2]
                       .v === 'p'
@@ -1032,16 +979,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
                     'p'
@@ -1054,16 +999,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
                       .v === 'p'
@@ -1079,15 +1022,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
             <img
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v === 'p'
                   ? roachBlue
@@ -1099,16 +1040,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4]
                       .v === 'p'
@@ -1121,16 +1060,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
-                  undefined
+                !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
                     'p'
@@ -1143,16 +1080,14 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
                 statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
-                  .v === undefined
+                !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? roachBlue
                   : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
                       .v === 'p'
@@ -1174,13 +1109,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[0] === null ||
-              statistic.roadmapdata.inGame.bigRoad[0].v === undefined
+              !isStatisticData('bigRoad', statistic, 0)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[0] === null ||
-              statistic.roadmapdata.inGame.bigRoad[0].v === undefined
+              !isStatisticData('bigRoad', statistic, 0)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[0].v === 'p'
                 ? blue
@@ -1194,13 +1129,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[198] === null ||
-              statistic.roadmapdata.inGame.bigRoad[198].v === undefined
+              !isStatisticData('bigRoad', statistic, 198)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[198] === null ||
-              statistic.roadmapdata.inGame.bigRoad[198].v === undefined
+              !isStatisticData('bigRoad', statistic, 198)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[198].v === 'p'
                 ? blue
@@ -1215,13 +1150,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[1] === null ||
-              statistic.roadmapdata.inGame.bigRoad[1].v === undefined
+              !isStatisticData('bigRoad', statistic, 1)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[1] === null ||
-              statistic.roadmapdata.inGame.bigRoad[1].v === undefined
+              !isStatisticData('bigRoad', statistic, 1)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[1].v === 'p'
                 ? blue
@@ -1235,13 +1170,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[199] === null ||
-              statistic.roadmapdata.inGame.bigRoad[199].v === undefined
+              !isStatisticData('bigRoad', statistic, 199)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[199] === null ||
-              statistic.roadmapdata.inGame.bigRoad[199].v === undefined
+              !isStatisticData('bigRoad', statistic, 199)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[199].v === 'p'
                 ? blue
@@ -1256,13 +1191,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[2] === null ||
-              statistic.roadmapdata.inGame.bigRoad[2].v === undefined
+              !isStatisticData('bigRoad', statistic, 2)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[2] === null ||
-              statistic.roadmapdata.inGame.bigRoad[2].v === undefined
+              !isStatisticData('bigRoad', statistic, 2)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[2].v === 'p'
                 ? blue
@@ -1276,13 +1211,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[200] === null ||
-              statistic.roadmapdata.inGame.bigRoad[200].v === undefined
+              !isStatisticData('bigRoad', statistic, 200)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[200] === null ||
-              statistic.roadmapdata.inGame.bigRoad[200].v === undefined
+              !isStatisticData('bigRoad', statistic, 200)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[200].v === 'p'
                 ? blue
@@ -1297,13 +1232,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[3] === null ||
-              statistic.roadmapdata.inGame.bigRoad[3].v === undefined
+              !isStatisticData('bigRoad', statistic, 3)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[3] === null ||
-              statistic.roadmapdata.inGame.bigRoad[3].v === undefined
+              !isStatisticData('bigRoad', statistic, 3)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[3].v === 'p'
                 ? blue
@@ -1317,13 +1252,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[201] === null ||
-              statistic.roadmapdata.inGame.bigRoad[201].v === undefined
+              !isStatisticData('bigRoad', statistic, 201)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[201] === null ||
-              statistic.roadmapdata.inGame.bigRoad[201].v === undefined
+              !isStatisticData('bigRoad', statistic, 201)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[201].v === 'p'
                 ? blue
@@ -1338,13 +1273,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[4] === null ||
-              statistic.roadmapdata.inGame.bigRoad[4].v === undefined
+              !isStatisticData('bigRoad', statistic, 4)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[4] === null ||
-              statistic.roadmapdata.inGame.bigRoad[4].v === undefined
+              !isStatisticData('bigRoad', statistic, 4)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[4].v === 'p'
                 ? blue
@@ -1358,13 +1293,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[202] === null ||
-              statistic.roadmapdata.inGame.bigRoad[202].v === undefined
+              !isStatisticData('bigRoad', statistic, 202)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[202] === null ||
-              statistic.roadmapdata.inGame.bigRoad[202].v === undefined
+              !isStatisticData('bigRoad', statistic, 202)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[202].v === 'p'
                 ? blue
@@ -1379,13 +1314,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[5] === null ||
-              statistic.roadmapdata.inGame.bigRoad[5].v === undefined
+              !isStatisticData('bigRoad', statistic, 5)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[5] === null ||
-              statistic.roadmapdata.inGame.bigRoad[5].v === undefined
+              !isStatisticData('bigRoad', statistic, 5)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[5].v === 'p'
                 ? blue
@@ -1399,13 +1334,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigRoad[203] === null ||
-              statistic.roadmapdata.inGame.bigRoad[203].v === undefined
+              !isStatisticData('bigRoad', statistic, 203)
                 ? 'srcInvisible'
                 : 'srcVisible'
             }
             src={
               statistic.roadmapdata.inGame.bigRoad[203] === null ||
-              statistic.roadmapdata.inGame.bigRoad[203].v === undefined
+              !isStatisticData('bigRoad', statistic, 203)
                 ? blue
                 : statistic.roadmapdata.inGame.bigRoad[203].v === 'p'
                 ? blue
@@ -1421,13 +1356,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[0] === null ||
-              statistic.roadmapdata.inGame.bigEye[0].v === undefined
+              !isStatisticData('bigEye', statistic, 0)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[0] === null ||
-              statistic.roadmapdata.inGame.bigEye[0].v === undefined
+              !isStatisticData('bigEye', statistic, 0)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[0].v === 'p'
                 ? blue
@@ -1438,13 +1373,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[6] === null ||
-              statistic.roadmapdata.inGame.bigEye[6].v === undefined
+              !isStatisticData('bigEye', statistic, 6)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[6] === null ||
-              statistic.roadmapdata.inGame.bigEye[6].v === undefined
+              !isStatisticData('bigEye', statistic, 6)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[6].v === 'p'
                 ? blue
@@ -1455,13 +1390,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[1] === null ||
-              statistic.roadmapdata.inGame.bigEye[1].v === undefined
+              !isStatisticData('bigEye', statistic, 1)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[1] === null ||
-              statistic.roadmapdata.inGame.bigEye[1].v === undefined
+              !isStatisticData('bigEye', statistic, 1)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[1].v === 'p'
                 ? blue
@@ -1472,13 +1407,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[7] === null ||
-              statistic.roadmapdata.inGame.bigEye[7].v === undefined
+              !isStatisticData('bigEye', statistic, 7)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[7] === null ||
-              statistic.roadmapdata.inGame.bigEye[7].v === undefined
+              !isStatisticData('bigEye', statistic, 7)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[7].v === 'p'
                 ? blue
@@ -1492,13 +1427,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[396] === null ||
-              statistic.roadmapdata.inGame.bigEye[396].v === undefined
+              !isStatisticData('bigEye', statistic, 396)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[396] === null ||
-              statistic.roadmapdata.inGame.bigEye[396].v === undefined
+              !isStatisticData('bigEye', statistic, 396)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[396].v === 'p'
                 ? blue
@@ -1509,13 +1444,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[402] === null ||
-              statistic.roadmapdata.inGame.bigEye[402].v === undefined
+              !isStatisticData('bigEye', statistic, 402)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[402] === null ||
-              statistic.roadmapdata.inGame.bigEye[402].v === undefined
+              !isStatisticData('bigEye', statistic, 402)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[402].v === 'p'
                 ? blue
@@ -1526,13 +1461,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[397] === null ||
-              statistic.roadmapdata.inGame.bigEye[397].v === undefined
+              !isStatisticData('bigEye', statistic, 397)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[397] === null ||
-              statistic.roadmapdata.inGame.bigEye[397].v === undefined
+              !isStatisticData('bigEye', statistic, 397)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[397].v === 'p'
                 ? blue
@@ -1543,13 +1478,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[403] === null ||
-              statistic.roadmapdata.inGame.bigEye[403].v === undefined
+              !isStatisticData('bigEye', statistic, 403)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[403] === null ||
-              statistic.roadmapdata.inGame.bigEye[403].v === undefined
+              !isStatisticData('bigEye', statistic, 403)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[403].v === 'p'
                 ? blue
@@ -1564,13 +1499,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[2] === null ||
-              statistic.roadmapdata.inGame.bigEye[2].v === undefined
+              !isStatisticData('bigEye', statistic, 2)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[2] === null ||
-              statistic.roadmapdata.inGame.bigEye[2].v === undefined
+              !isStatisticData('bigEye', statistic, 2)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[2].v === 'p'
                 ? blue
@@ -1581,13 +1516,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[8] === null ||
-              statistic.roadmapdata.inGame.bigEye[8].v === undefined
+              !isStatisticData('bigEye', statistic, 8)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[8] === null ||
-              statistic.roadmapdata.inGame.bigEye[8].v === undefined
+              !isStatisticData('bigEye', statistic, 8)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[8].v === 'p'
                 ? blue
@@ -1598,13 +1533,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[3] === null ||
-              statistic.roadmapdata.inGame.bigEye[3].v === undefined
+              !isStatisticData('bigEye', statistic, 3)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[3] === null ||
-              statistic.roadmapdata.inGame.bigEye[3].v === undefined
+              !isStatisticData('bigEye', statistic, 3)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[3].v === 'p'
                 ? blue
@@ -1615,13 +1550,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[9] === null ||
-              statistic.roadmapdata.inGame.bigEye[9].v === undefined
+              !isStatisticData('bigEye', statistic, 9)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[9] === null ||
-              statistic.roadmapdata.inGame.bigEye[9].v === undefined
+              !isStatisticData('bigEye', statistic, 9)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[9].v === 'p'
                 ? blue
@@ -1635,13 +1570,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[398] === null ||
-              statistic.roadmapdata.inGame.bigEye[398].v === undefined
+              !isStatisticData('bigEye', statistic, 398)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[398] === null ||
-              statistic.roadmapdata.inGame.bigEye[398].v === undefined
+              !isStatisticData('bigEye', statistic, 398)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[398].v === 'p'
                 ? blue
@@ -1652,13 +1587,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[404] === null ||
-              statistic.roadmapdata.inGame.bigEye[404].v === undefined
+              !isStatisticData('bigEye', statistic, 404)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[404] === null ||
-              statistic.roadmapdata.inGame.bigEye[404].v === undefined
+              !isStatisticData('bigEye', statistic, 404)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[404].v === 'p'
                 ? blue
@@ -1669,13 +1604,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[399] === null ||
-              statistic.roadmapdata.inGame.bigEye[399].v === undefined
+              !isStatisticData('bigEye', statistic, 399)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[399] === null ||
-              statistic.roadmapdata.inGame.bigEye[399].v === undefined
+              !isStatisticData('bigEye', statistic, 399)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[399].v === 'p'
                 ? blue
@@ -1686,13 +1621,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[405] === null ||
-              statistic.roadmapdata.inGame.bigEye[405].v === undefined
+              !isStatisticData('bigEye', statistic, 405)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[405] === null ||
-              statistic.roadmapdata.inGame.bigEye[405].v === undefined
+              !isStatisticData('bigEye', statistic, 405)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[405].v === 'p'
                 ? blue
@@ -1707,13 +1642,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[4] === null ||
-              statistic.roadmapdata.inGame.bigEye[4].v === undefined
+              !isStatisticData('bigEye', statistic, 4)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[4] === null ||
-              statistic.roadmapdata.inGame.bigEye[4].v === undefined
+              !isStatisticData('bigEye', statistic, 4)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[4].v === 'p'
                 ? blue
@@ -1724,13 +1659,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[10] === null ||
-              statistic.roadmapdata.inGame.bigEye[10].v === undefined
+              !isStatisticData('bigEye', statistic, 10)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[10] === null ||
-              statistic.roadmapdata.inGame.bigEye[10].v === undefined
+              !isStatisticData('bigEye', statistic, 10)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[10].v === 'p'
                 ? blue
@@ -1741,13 +1676,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[5] === null ||
-              statistic.roadmapdata.inGame.bigEye[5].v === undefined
+              !isStatisticData('bigEye', statistic, 5)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[5] === null ||
-              statistic.roadmapdata.inGame.bigEye[5].v === undefined
+              !isStatisticData('bigEye', statistic, 5)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[5].v === 'p'
                 ? blue
@@ -1758,13 +1693,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[11] === null ||
-              statistic.roadmapdata.inGame.bigEye[11].v === undefined
+              !isStatisticData('bigEye', statistic, 11)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[11] === null ||
-              statistic.roadmapdata.inGame.bigEye[11].v === undefined
+              !isStatisticData('bigEye', statistic, 11)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[11].v === 'p'
                 ? blue
@@ -1778,13 +1713,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[400] === null ||
-              statistic.roadmapdata.inGame.bigEye[400].v === undefined
+              !isStatisticData('bigEye', statistic, 400)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[400] === null ||
-              statistic.roadmapdata.inGame.bigEye[400].v === undefined
+              !isStatisticData('bigEye', statistic, 400)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[400].v === 'p'
                 ? blue
@@ -1795,13 +1730,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[406] === null ||
-              statistic.roadmapdata.inGame.bigEye[406].v === undefined
+              !isStatisticData('bigEye', statistic, 406)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[406] === null ||
-              statistic.roadmapdata.inGame.bigEye[406].v === undefined
+              !isStatisticData('bigEye', statistic, 406)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[406].v === 'p'
                 ? blue
@@ -1812,13 +1747,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[401] === null ||
-              statistic.roadmapdata.inGame.bigEye[401].v === undefined
+              !isStatisticData('bigEye', statistic, 401)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[401] === null ||
-              statistic.roadmapdata.inGame.bigEye[401].v === undefined
+              !isStatisticData('bigEye', statistic, 401)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[401].v === 'p'
                 ? blue
@@ -1829,13 +1764,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.bigEye[407] === null ||
-              statistic.roadmapdata.inGame.bigEye[407].v === undefined
+              !isStatisticData('bigEye', statistic, 407)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.bigEye[407] === null ||
-              statistic.roadmapdata.inGame.bigEye[407].v === undefined
+              !isStatisticData('bigEye', statistic, 407)
                 ? blue
                 : statistic.roadmapdata.inGame.bigEye[407].v === 'p'
                 ? blue
@@ -1850,13 +1785,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[0] === null ||
-              statistic.roadmapdata.inGame.small[0].v === undefined
+              !isStatisticData('small', statistic, 0)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[0] === null ||
-              statistic.roadmapdata.inGame.small[0].v === undefined
+              !isStatisticData('small', statistic, 0)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[0].v === 'p'
                 ? blueSolid
@@ -1867,13 +1802,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[6] === null ||
-              statistic.roadmapdata.inGame.small[6].v === undefined
+              !isStatisticData('small', statistic, 6)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[6] === null ||
-              statistic.roadmapdata.inGame.small[6].v === undefined
+              !isStatisticData('small', statistic, 6)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[6].v === 'p'
                 ? blueSolid
@@ -1884,13 +1819,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[1] === null ||
-              statistic.roadmapdata.inGame.small[1].v === undefined
+              !isStatisticData('small', statistic, 1)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[1] === null ||
-              statistic.roadmapdata.inGame.small[1].v === undefined
+              !isStatisticData('small', statistic, 1)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[1].v === 'p'
                 ? blueSolid
@@ -1901,13 +1836,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[7] === null ||
-              statistic.roadmapdata.inGame.small[7].v === undefined
+              !isStatisticData('small', statistic, 7)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[7] === null ||
-              statistic.roadmapdata.inGame.small[7].v === undefined
+              !isStatisticData('small', statistic, 7)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[7].v === 'p'
                 ? blueSolid
@@ -1921,13 +1856,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[192] === null ||
-              statistic.roadmapdata.inGame.roach[192].v === undefined
+              !isStatisticData('roach', statistic, 192)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[192] === null ||
-              statistic.roadmapdata.inGame.roach[192].v === undefined
+              !isStatisticData('roach', statistic, 192)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[192].v === 'p'
                 ? roachBlue
@@ -1938,13 +1873,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[198] === null ||
-              statistic.roadmapdata.inGame.roach[198].v === undefined
+              !isStatisticData('roach', statistic, 198)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[198] === null ||
-              statistic.roadmapdata.inGame.roach[198].v === undefined
+              !isStatisticData('roach', statistic, 198)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[198].v === 'p'
                 ? roachBlue
@@ -1955,13 +1890,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[193] === null ||
-              statistic.roadmapdata.inGame.roach[193].v === undefined
+              !isStatisticData('roach', statistic, 193)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[193] === null ||
-              statistic.roadmapdata.inGame.roach[193].v === undefined
+              !isStatisticData('roach', statistic, 193)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[193].v === 'p'
                 ? roachBlue
@@ -1972,13 +1907,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[199] === null ||
-              statistic.roadmapdata.inGame.roach[199].v === undefined
+              !isStatisticData('roach', statistic, 199)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[199] === null ||
-              statistic.roadmapdata.inGame.roach[199].v === undefined
+              !isStatisticData('roach', statistic, 199)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[199].v === 'p'
                 ? roachBlue
@@ -1993,13 +1928,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[2] === null ||
-              statistic.roadmapdata.inGame.small[2].v === undefined
+              !isStatisticData('small', statistic, 2)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[2] === null ||
-              statistic.roadmapdata.inGame.small[2].v === undefined
+              !isStatisticData('small', statistic, 2)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[2].v === 'p'
                 ? blueSolid
@@ -2010,13 +1945,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[8] === null ||
-              statistic.roadmapdata.inGame.small[8].v === undefined
+              !isStatisticData('small', statistic, 8)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[8] === null ||
-              statistic.roadmapdata.inGame.small[8].v === undefined
+              !isStatisticData('small', statistic, 8)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[8].v === 'p'
                 ? blueSolid
@@ -2027,13 +1962,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[3] === null ||
-              statistic.roadmapdata.inGame.small[3].v === undefined
+              !isStatisticData('small', statistic, 3)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[3] === null ||
-              statistic.roadmapdata.inGame.small[3].v === undefined
+              !isStatisticData('small', statistic, 3)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[3].v === 'p'
                 ? blueSolid
@@ -2044,13 +1979,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[9] === null ||
-              statistic.roadmapdata.inGame.small[9].v === undefined
+              !isStatisticData('small', statistic, 9)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[9] === null ||
-              statistic.roadmapdata.inGame.small[9].v === undefined
+              !isStatisticData('small', statistic, 9)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[9].v === 'p'
                 ? blueSolid
@@ -2064,13 +1999,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[194] === null ||
-              statistic.roadmapdata.inGame.roach[194].v === undefined
+              !isStatisticData('roach', statistic, 194)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[194] === null ||
-              statistic.roadmapdata.inGame.roach[194].v === undefined
+              !isStatisticData('roach', statistic, 194)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[194].v === 'p'
                 ? roachBlue
@@ -2081,13 +2016,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[200] === null ||
-              statistic.roadmapdata.inGame.roach[200].v === undefined
+              !isStatisticData('roach', statistic, 200)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[200] === null ||
-              statistic.roadmapdata.inGame.roach[200].v === undefined
+              !isStatisticData('roach', statistic, 200)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[200].v === 'p'
                 ? roachBlue
@@ -2098,13 +2033,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[195] === null ||
-              statistic.roadmapdata.inGame.roach[195].v === undefined
+              !isStatisticData('roach', statistic, 195)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[195] === null ||
-              statistic.roadmapdata.inGame.roach[195].v === undefined
+              !isStatisticData('roach', statistic, 195)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[195].v === 'p'
                 ? roachBlue
@@ -2115,13 +2050,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[201] === null ||
-              statistic.roadmapdata.inGame.roach[201].v === undefined
+              !isStatisticData('roach', statistic, 201)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[201] === null ||
-              statistic.roadmapdata.inGame.roach[201].v === undefined
+              !isStatisticData('roach', statistic, 201)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[201].v === 'p'
                 ? roachBlue
@@ -2136,13 +2071,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[4] === null ||
-              statistic.roadmapdata.inGame.small[4].v === undefined
+              !isStatisticData('small', statistic, 4)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[4] === null ||
-              statistic.roadmapdata.inGame.small[4].v === undefined
+              !isStatisticData('small', statistic, 4)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[4].v === 'p'
                 ? blueSolid
@@ -2153,13 +2088,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[10] === null ||
-              statistic.roadmapdata.inGame.small[10].v === undefined
+              !isStatisticData('small', statistic, 10)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[10] === null ||
-              statistic.roadmapdata.inGame.small[10].v === undefined
+              !isStatisticData('small', statistic, 10)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[10].v === 'p'
                 ? blueSolid
@@ -2170,13 +2105,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[5] === null ||
-              statistic.roadmapdata.inGame.small[5].v === undefined
+              !isStatisticData('small', statistic, 5)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[5] === null ||
-              statistic.roadmapdata.inGame.small[5].v === undefined
+              !isStatisticData('small', statistic, 5)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[5].v === 'p'
                 ? blueSolid
@@ -2187,13 +2122,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.small[11] === null ||
-              statistic.roadmapdata.inGame.small[11].v === undefined
+              !isStatisticData('small', statistic, 11)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.small[11] === null ||
-              statistic.roadmapdata.inGame.small[11].v === undefined
+              !isStatisticData('small', statistic, 11)
                 ? blueSolid
                 : statistic.roadmapdata.inGame.small[11].v === 'p'
                 ? blueSolid
@@ -2207,13 +2142,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[196] === null ||
-              statistic.roadmapdata.inGame.roach[196].v === undefined
+              !isStatisticData('roach', statistic, 196)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[196] === null ||
-              statistic.roadmapdata.inGame.roach[196].v === undefined
+              !isStatisticData('roach', statistic, 196)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[196].v === 'p'
                 ? roachBlue
@@ -2224,13 +2159,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[202] === null ||
-              statistic.roadmapdata.inGame.roach[202].v === undefined
+              !isStatisticData('roach', statistic, 202)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[202] === null ||
-              statistic.roadmapdata.inGame.roach[202].v === undefined
+              !isStatisticData('roach', statistic, 202)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[202].v === 'p'
                 ? roachBlue
@@ -2241,13 +2176,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[197] === null ||
-              statistic.roadmapdata.inGame.roach[197].v === undefined
+              !isStatisticData('roach', statistic, 197)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[197] === null ||
-              statistic.roadmapdata.inGame.roach[197].v === undefined
+              !isStatisticData('roach', statistic, 197)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[197].v === 'p'
                 ? roachBlue
@@ -2258,13 +2193,13 @@ const renderBacAndDTRoadmap = (statistic): React.ReactNode => {
           <img
             className={
               statistic.roadmapdata.inGame.roach[203] === null ||
-              statistic.roadmapdata.inGame.roach[203].v === undefined
+              !isStatisticData('roach', statistic, 203)
                 ? 'srcInvisibleSmall'
                 : 'srcVisibleSmall'
             }
             src={
               statistic.roadmapdata.inGame.roach[203] === null ||
-              statistic.roadmapdata.inGame.roach[203].v === undefined
+              !isStatisticData('roach', statistic, 203)
                 ? roachBlue
                 : statistic.roadmapdata.inGame.roach[203].v === 'p'
                 ? roachBlue
