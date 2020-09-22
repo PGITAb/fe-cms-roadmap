@@ -57,7 +57,7 @@ BAS.args = {
 
 export const LW = Template.bind({});
 LW.args = {
-  gameRoundID: 'BTJMFJAHE4OJA5B6EM10',
+  gameRoundID: 'BTKQLF2HE4OOA8DA7ECG',
   gameType: 'LW',
   url: 'https://dev-backoffice-api.weapi247.com/gameresult',
   // primary: true,
