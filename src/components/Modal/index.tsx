@@ -53,6 +53,7 @@ const gametypemap: { [key: string]: number } = {
 
 const ModalComponent: React.FC<ModalComponentProps> = (props) => {
   const { visible, onCancel, gameRoundID, gameType, url } = props;
+  const [toShow, setToShow] = useState<boolean>(false);
   const [items, setItems] = useState(undefined);
   const [statistic, setStatistic] = useState(undefined);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -164,6 +165,7 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
               result.roadmap.roadmapData
             )
           );
+          setToShow(true);
           setIsLoaded(true);
           console.log(data);
         } catch (error) {
@@ -182,11 +184,14 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
 
   return (
     <Modal
-      visible={visible}
+      visible={toShow}
       footer={null}
       destroyOnClose
       centered
-      onCancel={onCancel}
+      onCancel={() => {
+        setToShow(false);
+        onCancel();
+      }}
     >
       <div className="modal-abcd">
         {renderHeaderContent()}

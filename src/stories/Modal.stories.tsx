@@ -48,7 +48,7 @@ const Template: Story<ModalComponentProps> = (args) => {
 
 export const BAS = Template.bind({});
 BAS.args = {
-  gameRoundID: 'BTJMB22HE4OJA5B6EGI0',
+  gameRoundID: 'BTTV75AHE4OSRB8ETN7G',
   gameType: 'BAS',
   url: 'https://dev-backoffice-api.weapi247.com/gameresult',
   // primary: true,
