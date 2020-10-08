@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './index.css';
-import { Row, Spin } from 'antd';
+import { Row, Spin, Alert } from 'antd';
 import { ConvertCMSStatistic } from 'playerclient';
 import renderHeader from './functions/renderHeader';
 import renderBacAndDTRoadmap from './functions/renderBacAndDTRoadmap';
@@ -178,6 +178,10 @@ const ModalComponent: React.FC<Props> = (props) => {
       setItems(undefined);
     };
   }, [gameRoundID, gameType, url]);
+
+  if (isError) {
+    return <Alert message="Something has gone wrong! :(" type="error" />;
+  }
 
   return !toShow ? (
     <Row justify="center">
