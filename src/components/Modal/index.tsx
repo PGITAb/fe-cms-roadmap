@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './index.css';
-import { Modal } from 'antd';
+import { Row, Spin } from 'antd';
 import { ConvertCMSStatistic } from 'playerclient';
 import renderHeader from './functions/renderHeader';
 import renderBacAndDTRoadmap from './functions/renderBacAndDTRoadmap';
@@ -167,7 +167,6 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
           );
           setToShow(true);
           setIsLoaded(true);
-          console.log(data);
         } catch (error) {
           console.log(error.response);
           setIsError(true);
@@ -182,35 +181,28 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
     };
   }, [visible, gameRoundID, gameType, url]);
 
-  return (
-    <Modal
-      visible={toShow}
-      footer={null}
-      destroyOnClose
-      centered
-      onCancel={() => {
-        setToShow(false);
-        onCancel();
-      }}
-    >
-      <div className="modal-abcd">
-        {renderHeaderContent()}
-        <div className="content">
-          <div id="div1-abcd">{renderContent()}</div>
-          <div id="div2-abcd">
-            <span className="label-abcd success-abcd">視頻</span>
-            <br />
-            <br />
-            {/* <Player
-              playsInline
-              // poster="/assets/poster.png"
-              src="http://media.w3.org/2010/05/bunny/movie.mp4"
-            /> */}
-            {renderStat()}
-          </div>
+  return !toShow ? (
+    <Row justify="center">
+      <Spin />
+    </Row>
+  ) : (
+    <div className="modal-abcd">
+      {renderHeaderContent()}
+      <div className="content">
+        <div id="div1-abcd">{renderContent()}</div>
+        <div id="div2-abcd">
+          <span className="label-abcd success-abcd">視頻</span>
+          <br />
+          <br />
+          {/* <Player
+        playsInline
+        // poster="/assets/poster.png"
+        src="http://media.w3.org/2010/05/bunny/movie.mp4"
+      /> */}
+          {renderStat()}
         </div>
       </div>
-    </Modal>
+    </div>
   );
 };
 
