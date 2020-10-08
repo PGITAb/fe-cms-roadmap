@@ -1,6 +1,6 @@
 {
   "name": "fe-react-cms-roadmap",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "main": "build/index.js",
   "private": false,
   "files": [
