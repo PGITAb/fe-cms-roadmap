@@ -24,9 +24,7 @@ export interface VideoProps {
   gameType: string | null;
 }
 
-export interface ModalComponentProps extends VideoProps {
-  visible: boolean;
-  onCancel: () => void;
+export interface Props extends VideoProps {
   url: string;
 }
 
@@ -51,8 +49,8 @@ const gametypemap: { [key: string]: number } = {
   L28: 25,
 };
 
-const ModalComponent: React.FC<ModalComponentProps> = (props) => {
-  const { visible, onCancel, gameRoundID, gameType, url } = props;
+const ModalComponent: React.FC<Props> = (props) => {
+  const { gameRoundID, gameType, url } = props;
   const [toShow, setToShow] = useState<boolean>(false);
   const [items, setItems] = useState(undefined);
   const [statistic, setStatistic] = useState(undefined);
@@ -149,7 +147,7 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
   }, [isError, isLoaded, gameType, statistic, items]);
 
   useEffect(() => {
-    if (visible && gameRoundID && gameType) {
+    if (gameRoundID && gameType) {
       (async (): Promise<void> => {
         try {
           const { data } = await axios.get(url, {
@@ -168,18 +166,18 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
           setToShow(true);
           setIsLoaded(true);
         } catch (error) {
-          console.log(error.response);
           setIsError(true);
         }
       })();
     }
     return (): void => {
+      setToShow(false);
       setIsLoaded(false);
       setIsError(false);
       setStatistic(undefined);
       setItems(undefined);
     };
-  }, [visible, gameRoundID, gameType, url]);
+  }, [gameRoundID, gameType, url]);
 
   return !toShow ? (
     <Row justify="center">
