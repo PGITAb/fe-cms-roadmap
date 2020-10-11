@@ -57,7 +57,7 @@ BAS.args = {
 
 export const LW = Template.bind({});
 LW.args = {
-  gameRoundID: 'BTKQLF2HE4OOA8DA7ECG',
+  gameRoundID: 'BU1I1G9T726CTSUICDDG',
   gameType: 'LW',
   url: 'https://dev-backoffice-api.weapi247.com/gameresult',
   // primary: true,
@@ -66,7 +66,7 @@ LW.args = {
 
 export const DI = Template.bind({});
 DI.args = {
-  gameRoundID: 'BTKPIU2HE4OJNQI0CE6G',
+  gameRoundID: 'BU1I1GPT726CTSUICDF0',
   gameType: 'DI',
   url: 'https://dev-backoffice-api.weapi247.com/gameresult',
   // primary: true,

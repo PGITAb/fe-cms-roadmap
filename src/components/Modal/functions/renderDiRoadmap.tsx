@@ -71,7 +71,7 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.bead[i] === null ||
                 !isStatisticData('bead', statistic, i)
-                  ? 'srcInvisibleDi'
+                  ? 'srcVisibleDi'
                   : 'srcVisibleDi'
               }
               src={dices[statistic.roadmapdata.inGame.bead[i].dice[0]]}
@@ -82,7 +82,7 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.bead[i] === null ||
                 !isStatisticData('bead', statistic, i)
-                  ? 'srcInvisibleDi'
+                  ? 'srcVisibleDi'
                   : 'srcVisibleDi'
               }
               src={dices[statistic.roadmapdata.inGame.bead[i].dice[1]]}
@@ -93,7 +93,7 @@ const renderDiRoadmap = (statistic, gameType): React.ReactNode => {
               className={
                 statistic.roadmapdata.inGame.bead[i] === null ||
                 !isStatisticData('bead', statistic, i)
-                  ? 'srcInvisibleDi'
+                  ? 'srcVisibleDi'
                   : 'srcVisibleDi'
               }
               src={dices[statistic.roadmapdata.inGame.bead[i].dice[2]]}
