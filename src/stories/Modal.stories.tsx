@@ -75,7 +75,7 @@ DI.args = {
 
 export const ROL = Template.bind({});
 ROL.args = {
-  gameRoundID: 'BTKPITQHE4OJNQI0CE5G',
+  gameRoundID: 'BU1I1G1T726CTSUICDD0',
   gameType: 'ROL',
   url: 'https://dev-backoffice-api.weapi247.com/gameresult',
   // primary: true,
