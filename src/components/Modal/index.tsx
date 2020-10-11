@@ -18,6 +18,8 @@ import renderDtStat from './functions/renderDtStat';
 import renderDiStat from './functions/renderDiStat';
 import renderRoStat from './functions/renderRoStat';
 import renderLwStat from './functions/renderLwStat';
+import "../../../node_modules/video-react/dist/video-react.css";
+import { Player } from 'video-react';
 
 export interface VideoProps {
   gameRoundID: string | null;
@@ -188,24 +190,24 @@ const ModalComponent: React.FC<Props> = (props) => {
       <Spin />
     </Row>
   ) : (
-    <div className="modal-abcd">
-      {renderHeaderContent()}
-      <div className="content">
-        <div id="div1-abcd">{renderContent()}</div>
-        <div id="div2-abcd">
-          <span className="label-abcd success-abcd">視頻</span>
-          <br />
-          <br />
-          {/* <Player
-        playsInline
-        // poster="/assets/poster.png"
-        src="http://media.w3.org/2010/05/bunny/movie.mp4"
-      /> */}
-          {renderStat()}
+      <div className="modal-abcd">
+        {renderHeaderContent()}
+        <div className="content">
+          <div id="div1-abcd">{renderContent()}</div>
+          <div id="div2-abcd">
+            <span className="label-abcd success-abcd">視頻</span>
+            <br />
+            <br />
+            <Player
+              playsInline
+              // poster="/assets/poster.png"
+              src="http://media.w3.org/2010/05/bunny/movie.mp4"
+            />
+            {renderStat()}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default ModalComponent;
