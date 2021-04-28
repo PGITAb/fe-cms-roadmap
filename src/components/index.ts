@@ -1,3 +1,3 @@
-import Modal from './Modal';
+import RoadMapComponent from './Roadmap';
 
-export default Modal;
+export default RoadMapComponent;

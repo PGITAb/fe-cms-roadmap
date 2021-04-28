@@ -186,7 +186,6 @@ const RoadMapComponent: React.FC<Props> = (props) => {
     </Row>
   ) : (
       <div className="modal-abcd">
-        {renderHeaderContent()}
         <div className="content">
           <div id="div1-abcd">{renderContent()}</div>
         </div>
