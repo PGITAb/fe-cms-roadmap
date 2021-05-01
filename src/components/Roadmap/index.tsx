@@ -18,7 +18,7 @@ import renderDtStat from '../Modal/functions/renderDtStat';
 import renderDiStat from '../Modal/functions/renderDiStat';
 import renderRoStat from '../Modal/functions/renderRoStat';
 import renderLwStat from '../Modal/functions/renderLwStat';
-import "../../../node_modules/video-react/dist/video-react.css";
+import '../../../node_modules/video-react/dist/video-react.css';
 // import { Player } from 'video-react';
 
 export interface VideoProps {
@@ -28,6 +28,11 @@ export interface VideoProps {
 
 export interface Props extends VideoProps {
   url: string;
+}
+
+export interface RoadmapProps {
+  gameType: string;
+  roadmapData: any;
 }
 
 const gametypemap: { [key: string]: number } = {
@@ -51,7 +56,7 @@ const gametypemap: { [key: string]: number } = {
   L28: 25,
 };
 
-const RoadMapComponent: React.FC<Props> = (props) => {
+const RoadMapComponentOnline: React.FC<Props> = (props) => {
   const { gameRoundID, gameType, url } = props;
   const [toShow, setToShow] = useState<boolean>(false);
   const [items, setItems] = useState(undefined);
@@ -72,41 +77,21 @@ const RoadMapComponent: React.FC<Props> = (props) => {
         case 'BAS':
         case 'BAI':
         case 'BAM': {
-          return (
-            <>
-              {renderBacAndDTRoadmap(statistic)}
-            </>
-          );
+          return <>{renderBacAndDTRoadmap(statistic)}</>;
         }
         case 'DT': {
-          return (
-            <>
-              {renderBacAndDTRoadmap(statistic)}
-            </>
-          );
+          return <>{renderBacAndDTRoadmap(statistic)}</>;
         }
         case 'DI':
         case 'DIL': {
-          return (
-            <>
-              {renderDiRoadmap(statistic, gameType)}
-            </>
-          );
+          return <>{renderDiRoadmap(statistic, gameType)}</>;
         }
         case 'RO':
         case 'ROL': {
-          return (
-            <>
-              {renderRoRoadmap(statistic)}
-            </>
-          );
+          return <>{renderRoRoadmap(statistic)}</>;
         }
         case 'LW': {
-          return (
-            <>
-              {renderLwRoadmap(statistic)}
-            </>
-          );
+          return <>{renderLwRoadmap(statistic)}</>;
         }
         default:
           break;
@@ -185,12 +170,64 @@ const RoadMapComponent: React.FC<Props> = (props) => {
       <Spin />
     </Row>
   ) : (
-      <div className="modal-abcd">
-        <div className="content">
-          <div id="div1-abcd">{renderContent()}</div>
-        </div>
+    <div className="modal-abcd">
+      <div className="content">
+        <div id="div1-abcd">{renderContent()}</div>
       </div>
-    );
+    </div>
+  );
+};
+
+const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
+  const { gameType, roadmapData } = props;
+  const [statistic, setStatistic] = useState(undefined);
+
+  const renderContent = useCallback((): any => {
+    if (gameType && statistic) {
+      switch (gameType) {
+        case 'BAC':
+        case 'BAS':
+        case 'BAI':
+        case 'BAM': {
+          return <>{renderBacAndDTRoadmap(statistic)}</>;
+        }
+        case 'DT': {
+          return <>{renderBacAndDTRoadmap(statistic)}</>;
+        }
+        case 'DI':
+        case 'DIL': {
+          return <>{renderDiRoadmap(statistic, gameType)}</>;
+        }
+        case 'RO':
+        case 'ROL': {
+          return <>{renderRoRoadmap(statistic)}</>;
+        }
+        case 'LW': {
+          return <>{renderLwRoadmap(statistic)}</>;
+        }
+        default:
+          break;
+      }
+    }
+  }, [gameType, statistic]);
+
+  useEffect(() => {
+    if (props.roadmapData != undefined) {
+      setStatistic(ConvertCMSStatistic(gametypemap[gameType], roadmapData));
+    }
+
+    return (): void => {
+      setStatistic(undefined);
+    };
+  }, [gameType, roadmapData]);
+
+  return (
+    <div className="modal-abcd">
+      <div className="content">
+        <div id="div1-abcd">{renderContent()}</div>
+      </div>
+    </div>
+  );
 };
 
 export default RoadMapComponent;
