@@ -1,6 +1,7 @@
 {
   "name": "fe-cms-roadmap",
   "version": "2.0.000001",
+  "main": "dist/index.js",
   "private": true,
   "dependencies": {
     "@types/react": "^17.0.2",
