@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: './src/components/index.ts',
+  entry: './src/components/Roadmap/index.ts',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
