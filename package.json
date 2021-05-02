@@ -2,6 +2,7 @@
   "name": "fe-cms-roadmap",
   "version": "2.0.000002",
   "private": true,
+  "main": "dist/index.js",
   "scripts": {
     "start": "npm run storybook",
     "preinstall": "rm -rf ./node_modules ./yarn.lock ./package-lock.json",
