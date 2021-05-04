@@ -53,14 +53,14 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
         case 'BAC':
         case 'BAS':
         case 'BAI':
-        case 'BAM': 
-        case 'BAB': 
-        case 'BASB': 
-        case 'BAIB': 
+        case 'BAM':
+        case 'BAB':
+        case 'BASB':
+        case 'BAIB':
         case 'BAMB': {
           return <>{renderBacAndDTRoadmap(statistic)}</>;
         }
-        case 'DT': 
+        case 'DT':
         case 'DTB': {
           return <>{renderBacAndDTRoadmap(statistic)}</>;
         }
@@ -83,7 +83,15 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
 
   useEffect(() => {
     if (props.roadmapData != undefined) {
-      setStatistic(ConvertCMSStatistic(gametypemap[gameType], roadmapData));
+      if (gameType === "BAB" ||
+        gameType === "BASB" ||
+        gameType === "BAIB" ||
+        gameType === "BAMB") {
+        // override Block-chain game to use BAC converter
+        setStatistic(ConvertCMSStatistic("BAC", roadmapData));
+      } else {
+        setStatistic(ConvertCMSStatistic(gametypemap[gameType], roadmapData));
+      }
     }
 
     return (): void => {

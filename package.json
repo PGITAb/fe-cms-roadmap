@@ -1,6 +1,6 @@
 {
   "name": "fe-cms-roadmap",
-  "version": "2.0.000004",
+  "version": "2.0.000005",
   "private": true,
   "main": "dist/index.js",
   "scripts": {
