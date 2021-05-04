@@ -53,10 +53,15 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
         case 'BAC':
         case 'BAS':
         case 'BAI':
-        case 'BAM': {
+        case 'BAM': 
+        case 'BAB': 
+        case 'BASB': 
+        case 'BAIB': 
+        case 'BAMB': {
           return <>{renderBacAndDTRoadmap(statistic)}</>;
         }
-        case 'DT': {
+        case 'DT': 
+        case 'DTB': {
           return <>{renderBacAndDTRoadmap(statistic)}</>;
         }
         case 'DI':
