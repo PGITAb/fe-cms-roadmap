@@ -76,7 +76,7 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
           return <>{renderLwRoadmap(statistic)}</>;
         }
         default:
-          break;
+          return <>GameType {gameType} not supported</>;
       }
     }
   }, [gameType, statistic]);
