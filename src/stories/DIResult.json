@@ -1,0 +1,64 @@
+{
+    "data": {
+        "tableID": "T-DI-002",
+        "gameRoundID": "C0Q9RG8O9JBVH6RH3NI0",
+        "shoeID": "C0Q9R90O9JBVH6RH3ND0",
+        "shoe": 10635,
+        "round": 2,
+        "video": "T-DI-002_C0Q9RG8O9JBVH6RH3NI0_default.mp4",
+        "result": "14[EVEN/BIG]",
+        "resultString": null,
+        "resultInt": {
+            "Dice1": 6,
+            "Dice2": 6,
+            "Dice3": 2,
+            "Odd": 2,
+            "Size": 2,
+            "Tie": 0,
+            "Total": 14
+        },
+        "resultBool": null,
+        "roadmap": {
+            "tableID": "T-DI-002",
+            "gameType": 12,
+            "shoeID": "C0Q9R90O9JBVH6RH3ND0",
+            "totalCount": 2,
+            "roadmapStatistic": {
+                "Big": 2,
+                "Dice1": 0,
+                "Dice2": 2,
+                "Dice3": 0,
+                "Dice4": 1,
+                "Dice5": 0,
+                "Dice6": 2,
+                "Even": 2,
+                "Odd": 0,
+                "Small": 0,
+                "Tie": 0
+            },
+            "roadmapData": {
+                "beads": {
+                    "value": "eJziUuRiZmFiExJxNgi0DLI08Lf0cgrzMAvyMPZzcZdiycvPSwUpYWNjgipxt0BS4mkAUQIIAAD//9fqDwM="
+                },
+                "boards": {
+                    "value": "eJzimsfEZcMlwcEjJOJsEGgZZGngb+nlFOZhFuRh7OfiziXBwQeVcbdAkvE04GKAQh44a1jyhKABxIQzgJhGdgBJjQYQfh4gAAD//389NHM="
+                },
+                "cold": {
+                    "value": "WzEyLDE0LDUsMTcsMThd"
+                },
+                "hot": {
+                    "value": "WzE2LDEzLDcsMTUsNF0="
+                },
+                "infos": {
+                    "value": "eyJDMFE5UjkwTzlKQlZINlJIM05ERyI6eyJkaWNlIjpbNCwyLDZdLCJnYW1lUm91bmRJRCI6IkMwUTlSOTBPOUpCVkg2UkgzTkRHIiwidmlkZW8iOiJub25lIiwib2RkcyI6MSwic2hvZSI6MTA2MzUsInJvdW5kIjoxfSwiQzBROVJHOE85SkJWSDZSSDNOSTAiOnsiZGljZSI6WzYsNiwyXSwiZ2FtZVJvdW5kSUQiOiJDMFE5Ukc4TzlKQlZINlJIM05JMCIsInZpZGVvIjoibm9uZSIsIm9kZHMiOjEsInNob2UiOjEwNjM1LCJyb3VuZCI6Mn19"
+                },
+                "mboards": {
+                    "value": "eJzimsfEZcMlwcEjJOJsEGgZZGngb+nlFOZhFuRh7OfiziXBwQeVcbdAkvE04GKAQh44a1jyhNZAAogJZwAxjewAQuVJjQYXKTxAAAAA///flDUz"
+                },
+                "pro": {
+                    "value": "eJzimsfEZcMlwcEjJOJsEGgZZGngb+nlFOZhFuRh7OfiziXBwQeVcbdAkvE04GKAQh44a1jyhPqYwQHEhDOAmEZ2ANGbJzUaIYOLBwgAAP//pTE5dQ=="
+                }
+            }
+        }
+    }
+}

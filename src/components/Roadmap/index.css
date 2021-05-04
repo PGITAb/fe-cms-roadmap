@@ -18,7 +18,7 @@
 
 .modal-abcd > .content {
   width: 100%;
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
   display: flex;
 }
 
@@ -47,7 +47,7 @@
   /* width: 55%;
   height: 50%; */
   /* float: left; */
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 
 #div1top-abcd {

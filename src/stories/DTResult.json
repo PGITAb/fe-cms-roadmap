@@ -1,0 +1,45 @@
+{
+    "data": {
+        "tableID": "TT-DT-001",
+        "gameRoundID": "C0PNDPGO9JBVH6RH02GG",
+        "shoeID": "C0PNCJ4404A83U1SM7FG",
+        "shoe": 7,
+        "round": 6,
+        "video": "TT-DT-001_C0PNDPGO9JBVH6RH02GG_default.mp4",
+        "result": "TIGER[DRAGON 1 TIGER 8]",
+        "resultString": {
+            "A1": "spade8",
+            "B1": "hearta"
+        },
+        "resultInt": {
+            "Bv": 8,
+            "Pv": 1
+        },
+        "resultBool": {
+            "Wina": true,
+            "Winb": false
+        },
+        "roadmap": {
+            "tableID": "TT-DT-001",
+            "gameType": 5,
+            "shoeID": "C0PNCJ4404A83U1SM7FG",
+            "totalCount": 6,
+            "roadmapStatistic": {
+                "BankerPairCount100": 0,
+                "BankerWinCount": 2,
+                "BankerWinCount100": 0,
+                "BothPairCount100": 0,
+                "PlayerPairCount100": 0,
+                "PlayerWinCount": 4,
+                "PlayerWinCount100": 0,
+                "TieWinCount": 0,
+                "TieWinCount100": 0
+            },
+            "roadmapData": {
+                "all": {
+                    "value": "eJzsl01u00AcxTOTJjZWuxlAQhYSlREbS5Zc25DAym6czuBSYpLAgo0JpFIR3197jtJlj8IhOAKHQOPY7sQdK91EE8ej325e8vzX/02SF+3fTe0u0lWwv2veGtjx80HkebYX9N2XB5OTHrZTFe4rmfpiwqgEZ2pnoYZOf/Q4OnxFHo2J7QxydS9TA5tRh7mzmqlkxKhHOJsqV2PMqBhrrfqBdHRHBQZ3y6hVQF8FDe62Wa286yWttOklrbTn4pnZZOVNM5NJ1oaeJoC4yeqtgjRHxM14SStlvPT+/CmlnJmnSCRbiiERiikRCvp9u5Z17wG6rwLzXpJYVjA5TsajIEzi8TB8OpgOwwQHJ0PLShLRDa8xnTCNw1gVh+hS1QQ2qjjSawHRqmshugNIJOvBSL8XV34ARJewZiO6gjUdvcYVFMoKuikV9HKyNBhZRoWxARX0er+7ouuBRLJujOv9BxNdwpqN6ArWdGgCTuvJX1j77rPBHP5py/VuB9EzjZ+hV3HePTudff/5zVTn72efvnyeu/4uacfgHIALoETHGj9rt+K8cDE77z7+etvz20SJ4TmAjNmVy+FWnKcWTjHZQx+SDjVrs2bl2+RWnOcuvcVkH3yF7FGzHWqWLe3K9fMqzhdLuxyt70OiUrcOdYs0/mV1Ks67P77O5qd9c+E681UCaADdC6CMb0ynVji1bPvgNSe/I/xm5wz+DwAA//9mr4wM"
+                }
+            }
+        }
+    }
+}
