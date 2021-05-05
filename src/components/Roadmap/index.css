@@ -134,13 +134,13 @@ div.columnRight-abcd {
 }
 
 .rowLw-abcd {
-  width: 85%;
+  /* width: 85%; */
   margin: auto;
   float: left;
 }
 
 .rowDi-abcd {
-  /* width: 92.5%; */
+  width: 100%;
   margin: auto;
   float: left;
 }
@@ -263,56 +263,39 @@ div.columnRight-abcd {
 }
 
 .columnDi {
-  border-style: groove;
-  border-width: 0.1px;
-  border-right: none;
-  border-bottom: none;
-  border-top: none;
-  width: 5.5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: inset 0 0 0 0.5px #DFDFDF;
+  width: calc(100%/13);
   margin: auto;
   float: left;
   text-align: center;
 }
 
 .columnDil {
-  border-style: groove;
-  border-width: 0.1px;
-  border-right: none;
-  border-bottom: none;
-  border-top: none;
-  width: 7%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: inset 0 0 0 0.5px #DFDFDF;
+  width: calc(100%/13);
   margin: auto;
   float: left;
   text-align: center;
 }
 
 .columnDiSize {
-  border-style: groove;
-  border-width: 0.1px;
-  border-right: none;
-  border-bottom: none;
-  width: 3.87%;
+  box-sizing: border-box;
+  padding: 1px;
+  line-height: 0;
+  box-shadow: inset 0 0 0 0.5px #DFDFDF;
+  width: calc(100%/25);
   margin: auto;
   float: left;
   text-align: center;
 }
 
 .sizeBottom {
-  border-bottom: solid !important;
-  border-bottom-width: 0.1px !important;
-}
-
-@media (max-width: 1453px) {
-  .columnDiSize {
-    border-style: groove;
-    border-width: 0.1px;
-    border-right: none;
-    border-bottom: none;
-    width: 3.63%;
-    margin: auto;
-    float: left;
-    text-align: center;
-  }
+  /* border-bottom: solid !important;
+  border-bottom-width: 0.1px !important; */
 }
 
 .resultColumnDi {
@@ -322,29 +305,29 @@ div.columnRight-abcd {
   text-align: center;
 }
 
-.columnRo {
-  border-style: solid;
-  border-width: 0.5px;
-  border-left: none;
-  border-bottom: none;
-  width: 3.85%;
+.columnRo, .columnRoRight {
+  box-sizing: border-box;
+  padding: 1px;
+  line-height: 0;
+  box-shadow: inset 0 0 0 0.5px #DFDFDF;
+  width: calc(100%/24);
   margin: auto;
   float: left;
   text-align: center;
 }
 
 .columnLw {
-  border-style: solid;
-  border-width: 0.5px;
-  border-left: none;
-  border-bottom: none;
-  width: 7.2%;
+  box-sizing: border-box;
+  padding: 1px;
+  line-height: 0;
+  box-shadow: inset 0 0 0 0.5px #DFDFDF;
+  width: calc(100%/13);
   margin: auto;
   float: left;
   text-align: center;
 }
 
-.columnRoRight {
+/* .columnRoRight {
   border-style: solid;
   border-width: 0.5px;
   border-left: none;
@@ -354,7 +337,7 @@ div.columnRight-abcd {
   margin: auto;
   float: left;
   text-align: center;
-}
+} */
 
 .columnLeft-abcd {
   width: 13px;
