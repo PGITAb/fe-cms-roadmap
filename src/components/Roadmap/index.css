@@ -539,7 +539,7 @@ div.columnRight-abcd {
 }
 
 .roBoxRed {
-  background: red;
+  background: #c92323;
   border-radius: 12px;
   width: 4vw;
   height: 4vw;
@@ -582,7 +582,7 @@ div.columnRight-abcd {
 }
 
 .roResultTextRed {
-  color: red;
+  color: #c92323;
   white-space: pre;
 }
 
@@ -598,7 +598,7 @@ div.columnRight-abcd {
 
 .diPoint {
   float: left;
-  color: red;
+  color: #c92323;
   font-size: 2vw;
   font-weight: bold;
 }
@@ -610,11 +610,11 @@ div.columnRight-abcd {
 }
 
 .sizeColorRed {
-  color: red;
+  color: #c92323;
 }
 
 .sizeColorBlue {
-  color: blue;
+  color: #0167cb;
 }
 
 .headerDetail {
