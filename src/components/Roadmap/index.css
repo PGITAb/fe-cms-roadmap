@@ -255,7 +255,7 @@ div.columnRight-abcd {
 }
 
 .column-abcd {
-  width: calc(100%/38);
+  width: calc(100%/34);
   line-height: 13px;
   /* padding-bottom: 2.5%; */
   margin: auto;
