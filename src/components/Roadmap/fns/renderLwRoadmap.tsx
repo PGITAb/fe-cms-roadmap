@@ -12,8 +12,7 @@ const isStatisticData = (
   data: any,
   arrayIndex: number
 ): boolean | string => {
-  if (!data.roadmapdata.inGame[type][arrayIndex]?.v) return false;
-  return true;
+  return data.roadmapdata.inGame[type][arrayIndex]?.v !== undefined;
 };
 
 const renderLwRoadmap = (statistic: any): React.ReactNode => {
