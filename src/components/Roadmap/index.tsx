@@ -93,6 +93,10 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
           setStatistic(ConvertCMSStatistic(gametypemap["BAC"], roadmapData));
           break;
 
+        case "DTB":
+          setStatistic(ConvertCMSStatistic(gametypemap["DT"], roadmapData));
+          break;
+
         case "RO":
           let rodata = ConvertCMSStatistic(gametypemap[gameType], roadmapData);
           let last36Rounds = Object.keys(rodata.roadmapdata.gameInfo)
