@@ -115,6 +115,18 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
           setStatistic(roldata);
           break;
 
+        case "DIL":
+          let dildata = ConvertCMSStatistic(gametypemap[gameType], roadmapData);
+          let last16Rounds = Object.keys(dildata.roadmapdata.gameInfo)
+            .sort()
+            .reverse()
+            .slice(0, 16)
+            .reverse()
+            .map(k => dildata.roadmapdata.gameInfo[k]);
+          dildata.last16Rounds = last16Rounds;
+          setStatistic(dildata);
+          break;
+
         default:
           setStatistic(ConvertCMSStatistic(gametypemap[gameType], roadmapData));
       }

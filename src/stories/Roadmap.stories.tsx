@@ -17,7 +17,7 @@ export default {
 const Template: Story<RoadmapProps> = (args) => {
   const { gameType, roadmapData } = args;
   return (
-    <div style={{ width: 480 }}>
+    <div style={{ width: 441 }}>
       <RoadMapComponent
         roadmapData={roadmapData}
         gameType={gameType}

@@ -11,6 +11,8 @@ import dice4 from '../../../assets/dice4.png';
 import dice5 from '../../../assets/dice5.png';
 import dice6 from '../../../assets/dice6.png';
 
+import DILCard from '../dilcard/dilcard';
+
 const dices: { [key: number]: any } = {
   1: dice1,
   2: dice2,
@@ -400,6 +402,20 @@ const renderDiRoadmap = (statistic: any, gameType: any): React.ReactNode => {
         </div>
       );
     }
+  }
+
+  if(gameType === "DIL"){
+    // render last 16 round game result
+    let cards: any = [];
+    cards = statistic.last16Rounds.map((r: any) =>
+      <DILCard value={r.dice[0]+r.dice[1]+r.dice[2]} tag={0} />
+    );
+    cards.push(<div style={{ height: "8px" }}></div>);
+    return (
+      <div className="dilcard-container">
+        {cards}
+      </div>
+    );
   }
 
   return (
