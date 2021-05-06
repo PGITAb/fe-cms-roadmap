@@ -96,7 +96,9 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
         case "RO":
           let rodata = ConvertCMSStatistic(gametypemap[gameType], roadmapData);
           let last36Rounds = Object.keys(rodata.roadmapdata.gameInfo)
-            .sort().reverse().slice(0, 36).reverse()
+            .sort()
+            .reverse()
+            .slice(0, 36)
             .map(k => rodata.roadmapdata.gameInfo[k]);
           rodata.last36Rounds = last36Rounds;
           setStatistic(rodata);
@@ -109,7 +111,6 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
             .sort()
             .reverse()
             .slice(0, 20)
-            .reverse()
             .map(k => roldata.roadmapdata.gameInfo[k]);
           roldata.last20Rounds = last20Rounds;
           setStatistic(roldata);
@@ -121,7 +122,6 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
             .sort()
             .reverse()
             .slice(0, 16)
-            .reverse()
             .map(k => dildata.roadmapdata.gameInfo[k]);
           dildata.last16Rounds = last16Rounds;
           setStatistic(dildata);
