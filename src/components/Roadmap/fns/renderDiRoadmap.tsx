@@ -44,6 +44,69 @@ const renderDiRoadmap = (statistic: any, gameType: any): React.ReactNode => {
   const indents11 = [];
   const indents12 = [];
   const indents13 = [];
+
+  const bead = [...statistic.roadmapdata.inGame.bead].reverse().slice(0, 13);
+  for (let i = 0; i <= 13; i++){
+    if (bead[i] != null) {
+      const sum =
+        bead[i].dice[0] +
+        bead[i].dice[1] +
+        bead[i].dice[2];
+      let size = '大';
+      let color = 'sizeColorRed';
+      if (sum <= 10) {
+        size = '小';
+        color = 'sizeColorBlue';
+      }
+
+      indents1.push(
+        <div className={'columnDi'} key={i.toString()}>
+          <img
+            className={
+              bead[i] === null ||
+              !isStatisticData('bead', statistic, i)
+                ? 'srcVisibleDi'
+                : 'srcVisibleDi'
+            }
+            src={dices[bead[i].dice[0]]}
+            alt="icon"
+          />
+          <br />
+          <img
+            className={
+              bead[i] === null ||
+              !isStatisticData('bead', statistic, i)
+                ? 'srcVisibleDi'
+                : 'srcVisibleDi'
+            }
+            src={dices[bead[i].dice[1]]}
+            alt="icon"
+          />
+          <br />
+          <img
+            className={
+              bead[i] === null ||
+              !isStatisticData('bead', statistic, i)
+                ? 'srcVisibleDi'
+                : 'srcVisibleDi'
+            }
+            src={dices[bead[i].dice[2]]}
+            alt="icon"
+          />
+          <br />
+          <span className={color}>{sum}</span>
+          <br />
+          <span className={color}>{size}</span>
+          <br />
+        </div>
+      );
+    } else {
+      indents1.push(
+        <div className={'columnDi'} key={i.toString()}></div>
+      );
+    }
+  }
+  
   for (let i = 0; i <= 24; i++) {
     let className = 'columnDi';
     if (gameType === 'DIL') {
@@ -51,64 +114,6 @@ const renderDiRoadmap = (statistic: any, gameType: any): React.ReactNode => {
     }
     const classNameSize = 'columnDiSize';
     const classNameSize2 = 'columnDiSize sizeBottom';
-
-    if (i <= 12) {
-      const a = statistic.roadmapdata.inGame.bead[i];
-      if (statistic.roadmapdata.inGame.bead[i] != null) {
-        const sum =
-          statistic.roadmapdata.inGame.bead[i].dice[0] +
-          statistic.roadmapdata.inGame.bead[i].dice[1] +
-          statistic.roadmapdata.inGame.bead[i].dice[2];
-        let size = '大';
-        let color = 'sizeColorRed';
-        if (sum <= 10) {
-          size = '小';
-          color = 'sizeColorBlue';
-        }
-
-        indents1.push(
-          <div className={className} key={i.toString()}>
-            <img
-              className={
-                statistic.roadmapdata.inGame.bead[i] === null ||
-                !isStatisticData('bead', statistic, i)
-                  ? 'srcVisibleDi'
-                  : 'srcVisibleDi'
-              }
-              src={dices[statistic.roadmapdata.inGame.bead[i].dice[0]]}
-              alt="icon"
-            />
-            <br />
-            <img
-              className={
-                statistic.roadmapdata.inGame.bead[i] === null ||
-                !isStatisticData('bead', statistic, i)
-                  ? 'srcVisibleDi'
-                  : 'srcVisibleDi'
-              }
-              src={dices[statistic.roadmapdata.inGame.bead[i].dice[1]]}
-              alt="icon"
-            />
-            <br />
-            <img
-              className={
-                statistic.roadmapdata.inGame.bead[i] === null ||
-                !isStatisticData('bead', statistic, i)
-                  ? 'srcVisibleDi'
-                  : 'srcVisibleDi'
-              }
-              src={dices[statistic.roadmapdata.inGame.bead[i].dice[2]]}
-              alt="icon"
-            />
-            <br />
-            <span className={color}>{sum}</span>
-            <br />
-            <span className={color}>{size}</span>
-            <br />
-          </div>
-        );
-      }
-    }
 
     if (gameType === 'DI') {
       const indents2key = i * 6;
