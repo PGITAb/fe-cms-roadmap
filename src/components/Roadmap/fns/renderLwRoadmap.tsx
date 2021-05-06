@@ -71,6 +71,8 @@ const renderLwRoadmap = (statistic: any): React.ReactNode => {
     }
   }
 
+  indents1.reverse();
+
   return (
     <div>
       <div className="rowLw-abcd">{indents1}</div>
