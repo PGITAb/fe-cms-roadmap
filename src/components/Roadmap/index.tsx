@@ -17,6 +17,8 @@ import renderDiStat from './fns/renderDiStat';
 import renderRoStat from './fns/renderRoStat';
 import renderLwStat from './fns/renderLwStat';
 
+
+
 export interface RoadmapProps {
   gameType: string;
   roadmapData: any;
@@ -83,14 +85,38 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
 
   useEffect(() => {
     if (props.roadmapData != undefined) {
-      if (gameType === "BAB" ||
-        gameType === "BASB" ||
-        gameType === "BAIB" ||
-        gameType === "BAMB") {
-        // override Block-chain game to use BAC converter
-        setStatistic(ConvertCMSStatistic("BAC", roadmapData));
-      } else {
-        setStatistic(ConvertCMSStatistic(gametypemap[gameType], roadmapData));
+      switch (gameType) {
+        case "BAB":
+        case "BASB":
+        case "BAIB":
+        case "BAMB":
+          setStatistic(ConvertCMSStatistic(gametypemap["BAC"], roadmapData));
+          break;
+
+        case "RO":
+          let rodata = ConvertCMSStatistic(gametypemap[gameType], roadmapData);
+          let last36Rounds = Object.keys(rodata.roadmapdata.gameInfo)
+            .sort().reverse().slice(0, 36).reverse()
+            .map(k => rodata.roadmapdata.gameInfo[k]);
+          rodata.last36Rounds = last36Rounds;
+          setStatistic(rodata);
+          console.log(rodata);
+          break;
+
+        case "ROL":
+          let roldata = ConvertCMSStatistic(gametypemap[gameType], roadmapData);
+          let last20Rounds = Object.keys(roldata.roadmapdata.gameInfo)
+            .sort()
+            .reverse()
+            .slice(0, 20)
+            .reverse()
+            .map(k => roldata.roadmapdata.gameInfo[k]);
+          roldata.last20Rounds = last20Rounds;
+          setStatistic(roldata);
+          break;
+
+        default:
+          setStatistic(ConvertCMSStatistic(gametypemap[gameType], roadmapData));
       }
     }
 
