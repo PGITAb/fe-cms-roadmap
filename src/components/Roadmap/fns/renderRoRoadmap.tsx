@@ -1,6 +1,8 @@
 import React from 'react';
 import redRo from '../../../assets/redRo.png';
 import blackRo from '../../../assets/blackRo.png';
+import zeroRo from '../../../assets/zeroRo.png';
+import empty from '../../../assets/empty.png';
 import double from '../../../assets/double.png';
 import single from '../../../assets/single.png';
 import big from '../../../assets/big.png';
@@ -14,8 +16,7 @@ const isStatisticData = (
   data: any,
   arrayIndex: number
 ): boolean | string => {
-  if (!data.roadmapdata.inGame[type][arrayIndex]?.v) return false;
-  return true;
+  return data.roadmapdata.inGame[type][arrayIndex]?.v !== undefined;
 };
 
 const renderRoRoadmap = (statistic: any): React.ReactNode => {
@@ -49,10 +50,8 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
           src={
             statistic.roadmapdata.inGame.color[indents1key] === null ||
               !isStatisticData('color', statistic, indents1key)
-              ? blackRo
-              : statistic.roadmapdata.inGame.color[indents1key].v === 2
-                ? blackRo
-                : redRo
+              ? empty
+              : ({0: zeroRo, 1: redRo, 2: blackRo} as any)[statistic.roadmapdata.inGame.color[indents1key].v]
           }
           alt="icon"
         />
@@ -72,10 +71,8 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
           src={
             statistic.roadmapdata.inGame.color[indents2key] === null ||
               !isStatisticData('color', statistic, indents2key)
-              ? blackRo
-              : statistic.roadmapdata.inGame.color[indents2key].v === 2
-                ? blackRo
-                : redRo
+              ? empty
+              : ({0: zeroRo, 1: redRo, 2: blackRo} as any)[statistic.roadmapdata.inGame.color[indents2key].v]
           }
           alt="icon"
         />
@@ -95,10 +92,8 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
           src={
             statistic.roadmapdata.inGame.color[indents3key] === null ||
               !isStatisticData('color', statistic, indents3key)
-              ? blackRo
-              : statistic.roadmapdata.inGame.color[indents3key].v === 2
-                ? blackRo
-                : redRo
+              ? empty
+              : ({0: zeroRo, 1: redRo, 2: blackRo} as any)[statistic.roadmapdata.inGame.color[indents3key].v]
           }
           alt="icon"
         />
@@ -118,10 +113,8 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
           src={
             statistic.roadmapdata.inGame.color[indents4key] === null ||
               !isStatisticData('color', statistic, indents4key)
-              ? blackRo
-              : statistic.roadmapdata.inGame.color[indents4key].v === 2
-                ? blackRo
-                : redRo
+              ? empty
+              : ({0: zeroRo, 1: redRo, 2: blackRo} as any)[statistic.roadmapdata.inGame.color[indents4key].v]
           }
           alt="icon"
         />
@@ -141,10 +134,8 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
           src={
             statistic.roadmapdata.inGame.color[indents5key] === null ||
               !isStatisticData('color', statistic, indents5key)
-              ? blackRo
-              : statistic.roadmapdata.inGame.color[indents5key].v === 2
-                ? blackRo
-                : redRo
+              ? empty
+              : ({0: zeroRo, 1: redRo, 2: blackRo} as any)[statistic.roadmapdata.inGame.color[indents5key].v]
           }
           alt="icon"
         />
@@ -165,10 +156,8 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
           src={
             statistic.roadmapdata.inGame.color[indents6key] === null ||
               !isStatisticData('color', statistic, indents6key)
-              ? blackRo
-              : statistic.roadmapdata.inGame.color[indents6key].v === 2
-                ? blackRo
-                : redRo
+              ? empty
+              : ({0: zeroRo, 1: redRo, 2: blackRo} as any)[statistic.roadmapdata.inGame.color[indents6key].v]
           }
           alt="icon"
         />
@@ -195,7 +184,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.odd[indents7key] === null ||
                 !isStatisticData('odd', statistic, indents7key)
-                ? double
+                ? empty
                 : statistic.roadmapdata.inGame.odd[indents7key].v === 2
                   ? double
                   : single
@@ -217,7 +206,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.odd[indents8key] === null ||
                 !isStatisticData('odd', statistic, indents8key)
-                ? double
+                ? empty
                 : statistic.roadmapdata.inGame.odd[indents8key].v === 2
                   ? double
                   : single
@@ -239,7 +228,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.odd[indents9key] === null ||
                 !isStatisticData('odd', statistic, indents9key)
-                ? double
+                ? empty
                 : statistic.roadmapdata.inGame.odd[indents9key].v === 2
                   ? double
                   : single
@@ -261,7 +250,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.odd[indents10key] === null ||
                 !isStatisticData('odd', statistic, indents10key)
-                ? double
+                ? empty
                 : statistic.roadmapdata.inGame.odd[indents10key].v === 2
                   ? double
                   : single
@@ -283,7 +272,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.odd[indents11key] === null ||
                 !isStatisticData('odd', statistic, indents11key)
-                ? double
+                ? empty
                 : statistic.roadmapdata.inGame.odd[indents11key].v === 2
                   ? double
                   : single
@@ -305,7 +294,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.odd[indents12key] === null ||
                 !isStatisticData('odd', statistic, indents12key)
-                ? double
+                ? empty
                 : statistic.roadmapdata.inGame.odd[indents12key].v === 2
                   ? double
                   : single
@@ -332,7 +321,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.size[indents7key] === null ||
                 !isStatisticData('size', statistic, indents7key)
-                ? big
+                ? empty
                 : statistic.roadmapdata.inGame.size[indents7key].v === 2
                   ? big
                   : small
@@ -355,7 +344,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.size[indents8key] === null ||
                 !isStatisticData('size', statistic, indents8key)
-                ? big
+                ? empty
                 : statistic.roadmapdata.inGame.size[indents8key].v === 2
                   ? big
                   : small
@@ -378,7 +367,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.size[indents9key] === null ||
                 !isStatisticData('size', statistic, indents9key)
-                ? big
+                ? empty
                 : statistic.roadmapdata.inGame.size[indents9key].v === 2
                   ? big
                   : small
@@ -401,7 +390,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.size[indents10key] === null ||
                 !isStatisticData('size', statistic, indents10key)
-                ? big
+                ? empty
                 : statistic.roadmapdata.inGame.size[indents10key].v === 2
                   ? big
                   : small
@@ -424,7 +413,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.size[indents11key] === null ||
                 !isStatisticData('size', statistic, indents11key)
-                ? big
+                ? empty
                 : statistic.roadmapdata.inGame.size[indents11key].v === 2
                   ? big
                   : small
@@ -447,7 +436,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
             src={
               statistic.roadmapdata.inGame.size[indents12key] === null ||
                 !isStatisticData('size', statistic, indents12key)
-                ? big
+                ? empty
                 : statistic.roadmapdata.inGame.size[indents12key].v === 2
                   ? big
                   : small
