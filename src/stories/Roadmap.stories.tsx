@@ -8,6 +8,7 @@ import DILResult from './DILResult.json';
 import ROResult from './ROResult.json';
 import ROLResult from './ROLResult.json';
 import DTResult from './DTResult.json';
+import LWStat from '../components/Statistic/LWStat';
 
 export default {
   title: 'Example/Roadmap',
@@ -18,10 +19,18 @@ const Template: Story<RoadmapProps> = (args) => {
   const { gameType, roadmapData } = args;
   return (
     <div style={{ width: 441 }}>
-      <RoadMapComponent
+      {gameType=="LW"
+      ?<>
+        <LWStat roadmapData={roadmapData}/>
+        <RoadMapComponent
+          roadmapData={roadmapData}
+          gameType={gameType}
+        />
+      </>
+      :<RoadMapComponent
         roadmapData={roadmapData}
         gameType={gameType}
-      />
+      />}
     </div>
   );
 };

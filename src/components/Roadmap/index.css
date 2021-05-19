@@ -321,7 +321,8 @@ div.columnRight-abcd {
   padding: 1px;
   line-height: 0;
   box-shadow: inset 0 0 0 0.5px #DFDFDF;
-  width: calc(100%/14);
+  /* width: calc(100%/14); */
+  width: 31px;
   margin: auto;
   float: left;
   text-align: center;
