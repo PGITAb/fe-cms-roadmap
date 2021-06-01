@@ -412,7 +412,7 @@ const renderDiRoadmap = (statistic: any, gameType: any): React.ReactNode => {
     // render last 16 round game result
     let cards: any = [];
     cards = statistic.last16Rounds.map((r: any) =>
-      <DILCard value={r.dice[0]+r.dice[1]+r.dice[2]} tag={0} />
+      <DILCard value={r.dice[0]+r.dice[1]+r.dice[2]} tag={r.odds} />
     );
     cards.push(<div style={{ height: "8px" }}></div>);
     return (

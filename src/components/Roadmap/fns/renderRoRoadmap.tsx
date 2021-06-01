@@ -452,7 +452,7 @@ const renderRoRoadmap = (statistic: any): React.ReactNode => {
   let balls: any = [];
   if (statistic.last20Rounds !== undefined) {
     balls = statistic.last20Rounds.map((r: any) =>
-      <ROLBall value={r.v} tag={0} />
+      <ROLBall value={r.v} tag={r.odds} />
     );
     balls.push(<div style={{ height: "16px" }}></div>);
   } else if (statistic.last36Rounds !== undefined) {

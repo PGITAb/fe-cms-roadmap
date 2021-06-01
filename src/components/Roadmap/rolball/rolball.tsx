@@ -62,7 +62,7 @@ const ROLBall: React.FC<PropsType> = (props) => {
     default:
       break;
   }
-  if (props.tag !== undefined && props.tag > 0) {
+  if (props.tag !== undefined && props.tag > 1) {
     color = blue;
   }
   return props.value >= 0 && props.value <= 36 ? (
@@ -76,7 +76,7 @@ const ROLBall: React.FC<PropsType> = (props) => {
         className="roltag"
         style={{
           backgroundImage: `url("${tagImg}")`,
-          opacity: `${props.tag > 0 ? '1' : '0'}`,
+          opacity: `${props.tag > 1 ? '1' : '0'}`,
         }}
       >
         {props.tag}x

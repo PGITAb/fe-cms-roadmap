@@ -14,7 +14,7 @@ interface PropsType {
 const ROLBall: React.FC<PropsType> = (props) => {
 
   return props.value >= 0 && props.value <= 36 ?
-    props.tag === 0 ?
+    props.tag === 1 ?
       (
         // no multiplier
         <div className="dilcard">
@@ -29,7 +29,7 @@ const ROLBall: React.FC<PropsType> = (props) => {
           }}>
           <div className="diltag"
             style={{
-              opacity: `${props.tag > 0 ? '1' : '0'}`,
+              opacity: `${props.tag > 1 ? '1' : '0'}`,
             }}>
             {props.tag}x
           </div>
