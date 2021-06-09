@@ -58,6 +58,10 @@ const renderDiRoadmap = (statistic: any, gameType: any): React.ReactNode => {
         size = '小';
         color = 'sizeColorBlue';
       }
+      if(bead[i].dice[0] === bead[i].dice[1] && bead[i].dice[1] === bead[i].dice[2]){
+        size = '圍';
+        color = 'sizeColorGreen';
+      }
 
       indents1.push(
         <div className={'columnDi'} key={i.toString()}>
