@@ -16,8 +16,9 @@ const isStatisticData = (
 };
 
 const renderLwRoadmap = (statistic: any): React.ReactNode => {
-  const indents1 = [];
-  for (let i = 0; i <= 38; i++) {
+  let indents1 = [];
+  const empty = [];
+  for (let i = 0; i < 140; i++) {
     const className = 'columnLw';
     let source = south;
 
@@ -67,10 +68,26 @@ const renderLwRoadmap = (statistic: any): React.ReactNode => {
           />
         </div>
       );
+    } else {
+      empty.push(
+        <div className={className} key={i.toString()}>
+          <img
+            className={
+              statistic.roadmapdata.inGame.bead[i] == null ||
+              !isStatisticData('bead', statistic, i)
+                ? 'srcInvisibleLw'
+                : 'srcVisibleLw'
+            }
+            src={source}
+            alt="icon"
+          />
+        </div>
+      );
     }
   }
 
   indents1.reverse();
+  indents1 = indents1.concat(empty);
 
   return (
     <div>
