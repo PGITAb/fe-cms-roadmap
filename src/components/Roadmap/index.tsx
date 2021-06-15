@@ -22,6 +22,7 @@ import renderLwStat from './fns/renderLwStat';
 export interface RoadmapProps {
   gameType: string;
   roadmapData: any;
+  lang?: string;
 }
 
 const gametypemap: { [key: string]: number } = {
@@ -50,6 +51,7 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
   const [statistic, setStatistic] = useState(undefined);
 
   const renderContent = useCallback((): any => {
+    let lang = props.lang || "ch";
     if (gameType && statistic) {
       switch (gameType) {
         case 'BAC':
@@ -72,7 +74,7 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
         }
         case 'RO':
         case 'ROL': {
-          return <>{renderRoRoadmap(statistic)}</>;
+          return <>{renderRoRoadmap(statistic, lang)}</>;
         }
         case 'LW': {
           return <>{renderLwRoadmap(statistic)}</>;

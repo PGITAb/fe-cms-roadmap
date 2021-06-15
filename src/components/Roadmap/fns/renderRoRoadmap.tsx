@@ -1,12 +1,19 @@
 import React from 'react';
-import redRo from '../../../assets/redRo.png';
-import blackRo from '../../../assets/blackRo.png';
-import zeroRo from '../../../assets/zeroRo.png';
+import redRo_zh from '../../../assets/redRo.png';
+import redRo_en from '../../../assets/redRo_en.png';
+import blackRo_zh from '../../../assets/blackRo.png';
+import blackRo_en from '../../../assets/blackRo_en.png';
+import zeroRo_zh from '../../../assets/zeroRo.png';
+import zeroRo_en from '../../../assets/zeroRo_en.png';
 import empty from '../../../assets/empty.png';
-import double from '../../../assets/double.png';
-import single from '../../../assets/single.png';
-import big from '../../../assets/big.png';
-import small from '../../../assets/small.png';
+import double_zh from '../../../assets/double.png';
+import double_en from '../../../assets/double_en.png';
+import single_zh from '../../../assets/single.png';
+import single_en from '../../../assets/single_en.png';
+import big_zh from '../../../assets/big.png';
+import big_en from '../../../assets/big_en.png';
+import small_zh from '../../../assets/small.png';
+import small_en from '../../../assets/small_en.png';
 
 import ROLBall from '../rolball/rolball';
 import ROBall from '../roball/roball';
@@ -19,7 +26,24 @@ const isStatisticData = (
   return data.roadmapdata.inGame[type][arrayIndex]?.v !== undefined;
 };
 
-const renderRoRoadmap = (statistic: any): React.ReactNode => {
+const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
+  let big = big_zh;
+  let small = small_zh;
+  let single = single_zh;
+  let double = double_zh;
+  let zeroRo = zeroRo_zh;
+  let redRo = redRo_zh;
+  let blackRo = blackRo_zh;
+  if(lang == "en"){
+    big = big_en;
+    small = small_en;
+    single = single_en;
+    double = double_en;
+    zeroRo = zeroRo_en;
+    redRo = redRo_en;
+    blackRo = blackRo_en;
+  }
+
   const indents1 = [];
   const indents2 = [];
   const indents3 = [];

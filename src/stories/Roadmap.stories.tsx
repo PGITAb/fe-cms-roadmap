@@ -16,7 +16,7 @@ export default {
 } as Meta;
 
 const Template: Story<RoadmapProps> = (args) => {
-  const { gameType, roadmapData } = args;
+  const { gameType, roadmapData, lang } = args;
   return (
     <div style={{ width: 441 }}>
       {gameType=="LW"
@@ -25,11 +25,13 @@ const Template: Story<RoadmapProps> = (args) => {
         <RoadMapComponent
           roadmapData={roadmapData}
           gameType={gameType}
+          lang={lang}
         />
       </>
       :<RoadMapComponent
         roadmapData={roadmapData}
         gameType={gameType}
+        lang={lang}
       />}
     </div>
   );
@@ -63,12 +65,14 @@ export const ROL = Template.bind({});
 ROL.args = {
   gameType: 'ROL',
   roadmapData: ROLResult.data.roadmap.roadmapData,
+  lang: 'en',
 };
 
 export const RO = Template.bind({});
 RO.args = {
   gameType: 'RO',
   roadmapData: ROResult.data.roadmap.roadmapData,
+  lang: 'en',
 };
 
 export const LW = Template.bind({});
