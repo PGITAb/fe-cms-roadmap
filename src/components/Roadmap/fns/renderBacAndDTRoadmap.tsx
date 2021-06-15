@@ -641,7 +641,7 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
         </div>
       );
     } else {
-      const j = i - 16;
+      const j = i - 17;
       if (i === 17) {
         indents10.push(
           <div
@@ -650,16 +650,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
           >
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -667,16 +667,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6)
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6] === null ||
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6)
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6] === null ||
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6].v ===
                     'p'
                     ? roachBlue
                     : roachRed
@@ -685,16 +685,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -702,18 +702,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -726,16 +726,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
           <div className="column-abcd leftBlack" key={(i + 32 * 12).toString()}>
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 2)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 2] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 2)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 2] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 2].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -743,18 +743,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 2]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -763,18 +763,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 2].v ===
                     'p'
                     ? roachBlue
                     : roachRed
@@ -783,18 +783,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 2]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -807,16 +807,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
           <div className="column-abcd leftBlack" key={(i + 32 * 13).toString()}>
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 4)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 4] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 4)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 4] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 4].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -824,18 +824,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 4]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -844,18 +844,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 4].v ===
                     'p'
                     ? roachBlue
                     : roachRed
@@ -864,18 +864,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 4]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -889,16 +889,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
           <div className="column-abcd topBlack" key={(i + 32 * 11).toString()}>
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -906,16 +906,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6)
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6] === null ||
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6] === null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6)
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6] === null ||
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6].v ===
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6].v ===
                     'p'
                     ? roachBlue
                     : roachRed
@@ -924,16 +924,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -941,18 +941,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -965,16 +965,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
           <div className="column-abcd" key={(i + 32 * 12).toString()}>
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 2)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 2] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 2] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 2)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 2] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 2].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 2].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -982,18 +982,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 2]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 2]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -1002,18 +1002,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 2].v ===
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 2].v ===
                     'p'
                     ? roachBlue
                     : roachRed
@@ -1022,18 +1022,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 2] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 2)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 2)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 2]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 2]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -1046,16 +1046,16 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
           <div className="column-abcd" key={(i + 32 * 13).toString()}>
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 4)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 4] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 4] === null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 4)
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 4] === null ||
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 4].v === 'p'
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 4].v === 'p'
                     ? roachBlue
                     : roachRed
               }
@@ -1063,18 +1063,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 4]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 4]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
@@ -1083,18 +1083,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, j * 2 * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, j * 2 * 6 + 1 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[j * 2 * 6 + 1 + 4].v ===
+                  : statistic.roadmapdata.inGame.roach[j * 2 * 6 + 1 + 4].v ===
                     'p'
                     ? roachBlue
                     : roachRed
@@ -1103,18 +1103,18 @@ const renderBacAndDTRoadmap = (statistic: any): React.ReactNode => {
             />
             <img
               className={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? 'srcInvisibleSmall'
                   : 'srcVisibleSmall'
               }
               src={
-                statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4] ===
+                statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 4] ===
                   null ||
-                  !isStatisticData('small', statistic, (j * 2 + 1) * 6 + 1 + 4)
+                  !isStatisticData('roach', statistic, (j * 2 + 1) * 6 + 1 + 4)
                   ? roachBlue
-                  : statistic.roadmapdata.inGame.small[(j * 2 + 1) * 6 + 1 + 4]
+                  : statistic.roadmapdata.inGame.roach[(j * 2 + 1) * 6 + 1 + 4]
                     .v === 'p'
                     ? roachBlue
                     : roachRed
