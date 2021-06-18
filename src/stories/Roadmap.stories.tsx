@@ -8,6 +8,7 @@ import DILResult from './DILResult.json';
 import ROResult from './ROResult.json';
 import ROLResult from './ROLResult.json';
 import DTResult from './DTResult.json';
+import RCResult from './RCResult.json';
 import LWStat from '../components/Statistic/LWStat';
 
 export default {
@@ -79,6 +80,12 @@ export const LW = Template.bind({});
 LW.args = {
   gameType: 'LW',
   roadmapData: LWResult.data.roadmap.roadmapData,
+};
+
+export const RC = Template.bind({});
+RC.args = {
+  gameType: 'RC',
+  roadmapData: RCResult.data.roadmap.roadmapData,
 };
 
 // export const DI = Template.bind({});

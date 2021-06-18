@@ -79,6 +79,9 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
         case 'LW': {
           return <>{renderLwRoadmap(statistic)}</>;
         }
+        case 'RC': {
+          return <>Hello</>;
+        }
         default:
           return <>GameType {gameType} not supported</>;
       }
@@ -131,6 +134,13 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
             .map(k => dildata.roadmapdata.gameInfo[k]);
           dildata.last16Rounds = last16Rounds;
           setStatistic(dildata);
+          break;
+
+        case "RC":
+          let test = ConvertCMSStatistic(gametypemap["RC"], roadmapData)
+          setStatistic(test);
+          console.log("stat", test, ", global =", statistic);
+          
           break;
 
         default:
