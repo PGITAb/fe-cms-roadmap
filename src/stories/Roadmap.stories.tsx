@@ -65,14 +65,14 @@ export const ROL = Template.bind({});
 ROL.args = {
   gameType: 'ROL',
   roadmapData: ROLResult.data.roadmap.roadmapData,
-  lang: 'en',
+  lang: 'zh',
 };
 
 export const RO = Template.bind({});
 RO.args = {
   gameType: 'RO',
   roadmapData: ROResult.data.roadmap.roadmapData,
-  lang: 'en',
+  lang: 'zh',
 };
 
 export const LW = Template.bind({});

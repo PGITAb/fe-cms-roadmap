@@ -1,8 +1,8 @@
 .roball {
-  margin: 16px 4px 0px 4px;
+  /* margin: 16px 4px 0px 4px; */
   display: inline-block;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   color: white;
   font-weight: 500;
   font-size: 13px;
