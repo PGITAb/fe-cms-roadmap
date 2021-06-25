@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run storybook",
     "preinstall": "rm -rf ./node_modules ./yarn.lock ./package-lock.json",
+    "postinstall": "npm run build",
     "build": "rollup -c",
     "storybook": "start-storybook -p 6006 -c storybook"
   },
