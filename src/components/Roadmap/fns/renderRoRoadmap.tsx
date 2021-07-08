@@ -83,7 +83,7 @@ const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
       if (statistic.roadmapdata.inGame.odd.length > 13 * 6) {
         offset = statistic.roadmapdata.inGame.odd.length - 13 * 6;
       }
-      let p = offset + ((i - 13) % 25) * 6 + Math.floor((i - 13) / 25);
+      let p = offset + ((i - 12) % 25) * 6 + Math.floor((i - 12) / 25);
 
       let card = <></>;
       if (statistic.roadmapdata.inGame.size[p] == null) {
