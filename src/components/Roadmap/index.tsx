@@ -101,11 +101,10 @@ const RoadMapComponent: React.FC<RoadmapProps> = (props) => {
 
         case "RO":
           let rodata = ConvertCMSStatistic(gametypemap[gameType], roadmapData);
-          let last36Rounds = Object.keys(rodata.roadmapdata.gameInfo)
-            .sort()
+          let last36Rounds = Object.keys(rodata.roadmapdata.inGame.bead)
             .reverse()
             .slice(0, 36)
-            .map(k => rodata.roadmapdata.gameInfo[k]);
+            .map(k => rodata.roadmapdata.inGame.bead[k]);
           rodata.last36Rounds = last36Rounds;
           setStatistic(rodata);
           console.log(rodata);

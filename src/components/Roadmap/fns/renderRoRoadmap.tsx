@@ -114,6 +114,11 @@ const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
         <ROLBall value={r.v} tag={r.odds} />
       </div>
     );
+    while(balls.length < 20){
+      balls.push(
+        <div className="roadmap-ro-ball-slot"></div>
+      );
+    }
     balls.push(<div style={{ height: "16px" }}></div>);
   } else if (statistic.last36Rounds !== undefined) {
     balls = statistic.last36Rounds.map((r: any) =>
@@ -121,6 +126,11 @@ const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
         <ROBall value={r.v} />
       </div>
     );
+    while(balls.length < 36){
+      balls.push(
+        <div className="roadmap-ro-ball-slot"></div>
+      );
+    }
   }
 
   return <>
