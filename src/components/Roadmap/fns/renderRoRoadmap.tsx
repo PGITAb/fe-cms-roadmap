@@ -36,11 +36,11 @@ const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
     if (statistic.roadmapdata.inGame.color[p] == null) {
       card = <></>;
     } else if (statistic.roadmapdata.inGame.color[p].v == 0) {
-      card = <div className="roadmap-cell-card roadmap-cell-card-rbzero">零</div>;
+      card = <div className="roadmap-cell-card roadmap-cell-card-rbzero">{lang=="en"?"Z":"零"}</div>;
     } else if (statistic.roadmapdata.inGame.color[p].v == 1) {
-      card = <div className="roadmap-cell-card roadmap-cell-card-red">紅</div>;
+      card = <div className="roadmap-cell-card roadmap-cell-card-red">{lang=="en"?"R":"紅"}</div>;
     } else if (statistic.roadmapdata.inGame.color[p].v == 2) {
-      card = <div className="roadmap-cell-card roadmap-cell-card-black">黑</div>;
+      card = <div className="roadmap-cell-card roadmap-cell-card-black">{lang=="en"?"B":"黑"}</div>;
     }
 
     if (i < 5 * 25) {
@@ -64,11 +64,11 @@ const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
       if (statistic.roadmapdata.inGame.odd[p] == null) {
         card = <></>;
       } else if (statistic.roadmapdata.inGame.odd[p].v == 0) {
-        card = <div className="roadmap-cell-card roadmap-cell-card-green">零</div>;
+        card = <div className="roadmap-cell-card roadmap-cell-card-green">{lang=="en"?"Z":"零"}</div>;
       } else if (statistic.roadmapdata.inGame.odd[p].v == 1) {
-        card = <div className="roadmap-cell-card roadmap-cell-card-red">單</div>;
+        card = <div className="roadmap-cell-card roadmap-cell-card-red">{lang=="en"?"S":"單"}</div>;
       } else if (statistic.roadmapdata.inGame.odd[p].v == 2) {
-        card = <div className="roadmap-cell-card roadmap-cell-card-blue">雙</div>;
+        card = <div className="roadmap-cell-card roadmap-cell-card-blue">{lang=="en"?"D":"雙"}</div>;
       }
 
       if (i % 25 == 12) {
@@ -89,11 +89,11 @@ const renderRoRoadmap = (statistic: any, lang: string): React.ReactNode => {
       if (statistic.roadmapdata.inGame.size[p] == null) {
         card = <></>;
       } else if (statistic.roadmapdata.inGame.size[p].v == 0) {
-        card = <div className="roadmap-cell-card roadmap-cell-card-green">零</div>;
+        card = <div className="roadmap-cell-card roadmap-cell-card-green">{lang=="en"?"Z":"零"}</div>;
       } else if (statistic.roadmapdata.inGame.size[p].v == 1) {
-        card = <div className="roadmap-cell-card roadmap-cell-card-blue">小</div>;
+        card = <div className="roadmap-cell-card roadmap-cell-card-blue">{lang=="en"?"S":"小"}</div>;
       } else if (statistic.roadmapdata.inGame.size[p].v == 2) {
-        card = <div className="roadmap-cell-card roadmap-cell-card-red">大</div>;
+        card = <div className="roadmap-cell-card roadmap-cell-card-red">{lang=="en"?"B":"大"}</div>;
       }
 
       if (i % 25 == 12) {
